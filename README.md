@@ -1,6 +1,6 @@
 # grupo-10
 
-##  **●Temática-"Box para vos"**
+##  **● Temática-"Box para vos"**
 
 Esta página esta destinada para aquellas personas que quieran hacer un regalo especial.  
 
@@ -11,7 +11,7 @@ En ***Box para vos*** nuestras cajas especiales estan dedicadas a todas las pers
 
 
 
-##  ●Paginas elegida como inspiracion para la creacion de box para vos
+##  ● Paginas elegida como inspiracion para la creacion de box para vos
 
 
 >- http://taste.com.ar/boutique/box-primavera/
@@ -34,8 +34,8 @@ final y con la opcin de comprar.
 >- https://shopboxfox.com/
 y en esta quinta pagina nos gusto como estaba organisadas la imaganes con el texto que iban alternando de izquierda a derecha.
 
-## ●WIREFRAME
+## ● WIREFRAME
 > https://wireframe.cc/pro/pp/7a23fc16b407768
 
-
-
+## ● TABLERO DE TRABAJO
+> https://trello.com/b/AtJLGRJU/tablero-de-trabajo-dh-grupo-10
