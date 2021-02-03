@@ -7,7 +7,7 @@ Esta página esta destinada para aquellas personas que quieran hacer un regalo e
 ***"Box para vos"***: una página donde vende cajas misteriosas con contenidos secretos que se revelan una ves que se abra, y asi recuperar la sensación de emoción al abrir un presente que no se sabe su contenido. 
 Al momento de eligir una caja, si queres, las podrás seleccionar de entre distintas categorias y temáticas, como pueden ser cajas misteriosas orientada al mundo del cine, con regalitos relacionados a este, como tambien cajas con temáticas como deportes, comida dulce o salada, tecnologia, o tambien dependiendo de la temporada cajas con tematicas de navidad, halloween, o valentín entre otras.
 
-En *Box para vos* nuestras cajas especiales estan dedicadas a todas las personas que les gusta esa sensación de incertidumbre y sorpresa. Pueden comprarse sorpresas para ellos mismos o para alguien más, con distintas opciones, como sorpresa aleatoria, de una categoría o un producto en específico.
+En ***Box para vos*** nuestras cajas especiales estan dedicadas a todas las personas que les gusta esa sensación de incertidumbre y sorpresa. Pueden comprarse sorpresas para ellos mismos o para alguien más, con distintas opciones, como sorpresa aleatoria, de una categoría o un producto en específico.
 
 
 
@@ -33,5 +33,9 @@ final y con la opcin de comprar.
 
 >- https://shopboxfox.com/
 y en esta quinta pagina nos gusto como estaba organisadas la imaganes con el texto que iban alternando de izquierda a derecha.
+
+## ●WIREFRAME
+> https://wireframe.cc/pro/pp/7a23fc16b407768
+
 
 
