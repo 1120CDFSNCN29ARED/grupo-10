@@ -1,0 +1,416 @@
+.background-image-box {
+    width: 100%;
+    display: flex; 
+}
+.background-image img {
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.background-image {
+    width: 100%;
+    position: relative;
+}
+
+
+
+#background-image-icon {
+    position: absolute;
+    z-index: 10;
+    margin:5% 6%;
+    color: white;
+    font-size: 6vw;
+    animation: gift-dance 0.8s infinite;
+    
+}
+
+
+#background-image-title {
+    font-size: 7.5vw;
+}
+
+#background-image-p {
+    font-size: 2.5vw;
+} 
+
+
+#background-image-text {
+    color: white;
+    position: absolute;
+    z-index: 10;
+    margin: 20% 5%;
+    border: solid 1vw;
+    padding: 1%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+@keyframes gift-dance{
+    0% {transform: rotate(15deg);}
+    50% {transform: rotate(-15deg);}
+    100%{transform: rotate(15deg);}
+}
+
+.featured-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 2%;
+    
+    
+
+}
+
+.section-categorys-title, .section-offers-title {
+    font-family: "bebas neue";
+    font-size: 6vw;
+    width: 90%;
+    margin: 2% auto 0px auto;
+    
+}
+
+
+
+.featured-category-img, .featured-product-img {   
+    width: 100%;
+    display: block;
+    
+}
+.category-title-h4 {
+    color: white;
+    text-align: center;
+    font-size: 4vw;
+    font-family: "QuickSand";
+}
+
+.category-title {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;   
+}
+
+.off{
+    color: rgb(51, 184, 69);
+    font-family: "bebas neue";
+    font-size: 3vw;
+}
+.offer-title {
+    width: 100%; 
+    text-align: center;
+    margin: auto;
+}
+.offer-title-h4 {   
+    color: rgb(50, 50, 50);
+    text-align: center;
+    font-size: 4vw;
+    font-family: "QuickSand";
+
+}
+
+.featured-category-img-div {  
+    width: 100%;
+    height: auto;
+    position: relative; 
+}
+
+.featured-category-img-div > img {  
+    max-width: 100%;
+    max-height: 80px;
+    object-fit: cover;
+}
+.offer-img-div > img {
+    object-fit: cover;
+
+}
+
+.featured-categorys-box {
+    flex-direction: column;   
+    display: flex;
+    width: 90%;
+    margin: 0px auto auto auto;
+    padding: auto;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-content: space-around;
+}
+
+.featured-offers-box {     
+    display: flex;
+    width: 90%;
+    margin: 0px auto auto auto;
+    padding: auto;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-content: space-around;
+}
+.featured-offer {
+    width: 40%;
+    margin: auto;
+    padding-bottom: 0px;
+    position: relative;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;  
+    background-color: rgb(225, 225, 225);
+    border: solid white;
+    box-shadow: 0px 0px 10px rgb(200, 200, 200);
+
+
+}
+
+.featured-category {
+    width: 100%;
+    margin: auto;
+    padding-bottom: 0px;
+    position: relative;
+    margin: 1%;
+ 
+}
+#movies-not-mobile, #food-not-mobile, #sports-not-mobile {
+    display: none;
+}
+
+#not-mobile-tablet-featured-offer, #not-tablet-featured-offer {
+    display: none;
+}
+
+.featured-products-box {
+    display: flex;
+    width: 100%;
+    margin: auto auto 2% auto;
+    padding: 2%;
+    flex-wrap: wrap;
+}
+
+.section-products-title {
+    font-family: "bebas neue";
+    text-align: center;
+    font-size: 6vw;
+    width: 100%;
+    padding: 2%;
+    background-color: rgb(200, 200, 200);
+}
+
+.featured-product {
+    display: flex;  
+    width: 90%;
+    margin: 2% auto;
+    flex-wrap: wrap;
+    padding: 2%;  
+}
+
+.featured-product-img-div {
+    height: auto;
+    margin: auto;
+}
+
+.featured-product-description {
+    display: none;
+    margin: auto;
+    width: 100%;
+    text-align: left;
+}
+
+.product-title {
+    margin: auto;
+    width: 100%;
+    padding: 2%;
+    text-align: center;
+}
+
+h5 {
+    text-align: center;
+    font-size: 5vw;
+    font-family:  "bebas neue";
+    transition: all 0.5s;
+}
+
+
+.scroll-imagenes img {
+    display: block;
+    width: 100%;
+}
+
+
+.sale-image {
+    position: absolute;
+    width: 100%;
+}
+
+#banner {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 2%;
+    margin-top: 4%;
+}
+.off {
+    font-size: 4.5vw;
+}
+
+
+
+@media (min-width: 768px) {
+    .featured-product {
+        width: 50%;
+    }
+    .featured-categorys-box {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .featured-category {
+        width: 48%;
+    }
+    .section-categorys-title, .section-products-title, .section-offers-title {
+        font-size: 4vw;
+    }
+    .category-title-h4, .offer-title-h4 {
+        font-size: 1.5vw;
+    }
+    h5 {
+        font-size: 3vw;
+    }
+    #movies-not-mobile, #food-not-mobile, #sports-not-mobile, #not-tablet-featured-offer {
+        display: inline;
+    }
+    .featured-category-img-div > img {  
+        max-height: 100px;
+    }
+    .featured-offer {
+        width: 20%;
+    }
+    .off {
+        font-size: 2.5vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .featured-product {
+        width: 100%;
+        padding: 1%;
+    }
+
+    .featured-product:hover {
+        box-shadow: 0px 0px 30px rgb(100, 100, 100);
+        transition: 0.5s;
+    }
+    .featured-product:hover .product-title h5{
+        color:  #E5167F;
+    }
+
+    .featured-product-description{
+        display: flex;
+        font-size: 1.8vw;
+        height: 100%;
+        align-items: center;
+        text-align: justify;
+    }
+
+    .featured-product-img-div {
+        width: 50%;
+    }
+
+    .product-title {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .featured-category-img-div  img {  
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+    .featured-products-box, .featured-offers-box {
+        width: 80%;
+        padding: 0;
+    }
+    
+    .featured-categorys-box {
+        flex-direction: row;   
+        display: flex;
+        width: 80%;
+        margin: 0px auto auto auto;
+        padding: auto;
+    }
+    
+    .featured-category {
+        width: 15%;
+        margin: 2% auto;
+        position: relative; 
+    }
+
+    .featured-category:hover { 
+        transition: all 0.2s;
+        opacity: 70%;
+    }
+    .featured-offer:hover { 
+        transition: all 0.2s;
+        opacity: 70%;
+    }
+    .featured-offer:hover .offer-title-h4{ 
+        transition: all 0.2s;
+        color: #E5167F;
+    }
+    .featured-offers-box {
+        justify-content: space-between;
+        align-content: space-between;
+    }
+
+
+    #featured-middle-product {
+        flex-direction: row-reverse;
+    }
+    .section-categorys-title, .section-offers-title, .section-products-title {
+        font-size: 3vw;
+    }
+    .section-categorys-title, .section-offers-title {
+        width: 80%;
+    }
+    .category-title-h4 {
+        font-size: 1.5vw;
+    }
+    .offer-title-h4{
+        font-size: 1vw;
+        font-weight: bold;
+    }
+    h5 {
+        font-size: 2.5vw;
+    }
+    #not-mobile-tablet-featured-offer {
+        display: inline;
+    }
+    .featured-offer {
+        width: 14%;
+    }
+    .off {
+        font-size: 2vw;
+    }
+    
+}
+
+.promociones-img {
+    animation: scroll 10s infinite;
+}
+
+@keyframes scroll {
+    0% { opacity: 0%;}
+    40% {opacity: 100%;}
+    50% {opacity: 100%;}
+    60% {opacity: 100%;}
+    100% {opacity: 0%;} 
+}
+
+@keyframes color-change {
+    0% {color: yellow}
+    50% {color: #E5167F}
+    100% {color: yellow} 
+}
+
+.product-button-link {
+    border: none;
+}
+

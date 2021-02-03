@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box para Vos</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/login-register.css">
+    <link rel="stylesheet" href="/css/footer.css">
+
+</head>
+<body>
+
+    <!--HEADER-->
+    <header id="page-header">
+            <div class="main-header">
+        
+                <nav class="he-nav-content">
+                    <ul class="he-nav-list">
+                        <li class="he-nav-items"> <a href="/"> <button class="he-nav-buttom"> Home </button> </a> </li>
+                        <li class="he-nav-items"> <a href="#"> <button class="he-nav-buttom"> Categorias </button> </a> </li>
+                        <li class="he-nav-items"> <a href="#"> <button class="he-nav-buttom"> Contacto </button> </a> </li>
+                    </ul>
+                </nav>
+        
+                <div class="he-left-items">
+                    <button class="header-button he-bar-button">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+        
+                <a href="/"><img src="/img/BoxParaVosLogo.png" alt="BoxParaVos-Logo" class="he-logo"></a>
+        
+                <div class="he-rigth-item">
+                    <button class="header-button he-user-button">
+                        <i class="fas fa-user"></i>
+                    </button>
+                </div>
+        
+                <nav class="he-nav-content">
+                    <ul class="he-nav-list">
+                        <li class="he-nav-items"> <a href="/product-cart"> <button class="he-nav-buttom"> Carrito </button> </a> </li>
+                        <li class="he-nav-items"> <a href="/register-login"> <button class="he-nav-buttom"> Log In </button> </a> </li>
+                        <li class="he-nav-items"> <a href="/register-login"> <button class="he-nav-buttom"> Sign In </button> </a> </li>
+                    </ul>
+                </nav>
+        
+            </div>
+        
+    </header>
+    
+    <!--LOG-IN REGISTER MAIN-->
+    <main >
+
+        <div id="register-login-main">
+
+            <section id="log-in">
+
+                <form id="log-in-form" action="/" method="GET">
+                    <h6 id="log-in-title">LOG-IN</h6>
+                    <div id="name-pass-box">
+                        <div class="login-input-box">
+                            <input class="in-put" type="text" name="user-name" placeholder="Nombre de usario" id="login-user-name">
+                        </div>
+        
+                        <div class="login-input-box">
+                            <input class="in-put" type="pass" name="pass" placeholder="Elegí tu contraseña" id="pass">
+                        </div>
+
+                    </div>
+                    <div class="input-box" id="remember-forgot-box">
+                        <div id="remember-me-box">
+                            <input type="checkbox" name="remember" id="remember">
+                            <label for="remember" id="remember-me-label">Permanecer conectado</label>
+                        </div>  
+                        <span id="forgot-span">¿Olvidaste tu contraseña?</span>
+                    </div>
+    
+                    <div class="input-box">
+                        <input id="log-in-button" type="submit" value="Iniciar sesión">
+                    </div>
+                          
+                </form>
+            </section>
+
+            <span>o</span>
+    
+    
+            <section id="register">
+    
+                <form id="register-form" action="/" method="GET">
+                    <h6 id="check-in-title">REGISTRATE</h6>
+                    <div class="input-box">
+                      <input class="in-put" type="text" name="name" placeholder="Nombre y apellido" id="name" required>
+                    </div>
+              
+                    <div class="input-box">
+                      <input class="in-put" type="email" name="email" placeholder="E-mail" id="e-mail" required>
+                    </div>
+        
+                    <div class="input-box">
+                        <input class="in-put" type="text" name="user-name" placeholder="Nombre de usuario" id="user-name">
+                    </div>
+        
+                    <div class="input-box">
+                        <input class="in-put" type="date" name="birth-date" placeholder="Fecha de nacimiento" id="birth-date" required>
+                    </div>
+        
+                    <div class="input-box">
+                        <input class="in-put" type="text" name="adress" placeholder="Domicilio" id="adress" required>
+                    </div>
+          
+                    <div class="input-box">
+                        <input class="in-put" type="password" name="password" placeholder="Contraseña" id="contraseña">
+                    </div>    
+              
+                    <div class="input-box">
+                        <input id="send-button" type="submit" value="Registrarse" >
+                    </div>
+    
+                </form>
+    
+            </section>
+
+        </div>
+
+        
+
+    </main>
+
+
+    <!--FOOTER-->
+    <footer id="page-footer">
+        
+            <div class="footer">
+        
+                <div class="footer-img">
+                    <img src="/img/BoxParaVosLogo.png" alt="BoxParaVos-Logo" class="logo-footer">
+                </div>
+        
+                <div class="footer-hiper">
+                    <h2 class="footer-title">Contacto</h2>
+                    <div class="footer-hiper-content">
+                        <ul class="footer-list">
+                            <li class="footer-items">351-2548-9854</li>
+                            <li class="footer-items">boxparavos@dhmail.com</li>
+                            <li class="footer-items">BsAs, Argentina</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div class="footer-icons">
+                    <ul class="footer-list">
+                        <li class="footer-items fo-list-icon"> <i class="fab fa-instagram"></i> </li>
+                        <li class="footer-items fo-list-icon"> <i class="fab fa-facebook-square"></i> </li>
+                        <li class="footer-items fo-list-icon"> <i class="fab fa-pinterest-square"></i> </li>
+                    </ul>
+                </div>
+            </div>
+        
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

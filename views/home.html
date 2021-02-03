@@ -15,18 +15,19 @@
     
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/productCart.css">
-    <link rel="stylesheet" href="/css/productDetail.css">
+    <link rel="stylesheet" href="/css/homeMain.css">
     <link rel="stylesheet" href="/css/footer.css">
 
 </head>
-     <body>
-        <header id="page-header">
+<body>
+
+    <!--HEADER-->
+    <header id="page-header">
             <div class="main-header">
         
                 <nav class="he-nav-content">
                     <ul class="he-nav-list">
-                        <li class="he-nav-items"> <a href="#"> <button class="he-nav-buttom"> Home </button> </a> </li>
+                        <li class="he-nav-items"> <a href="/"> <button class="he-nav-buttom"> Home </button> </a> </li>
                         <li class="he-nav-items"> <a href="#"> <button class="he-nav-buttom"> Categorias </button> </a> </li>
                         <li class="he-nav-items"> <a href="#"> <button class="he-nav-buttom"> Contacto </button> </a> </li>
                     </ul>
@@ -49,16 +50,258 @@
                 <nav class="he-nav-content">
                     <ul class="he-nav-list">
                         <li class="he-nav-items"> <a href="/product-cart"> <button class="he-nav-buttom"> Carrito </button> </a> </li>
-                        <li class="he-nav-items"> <a href="#"> <button class="he-nav-buttom"> Log In </button> </a> </li>
-                        <li class="he-nav-items"> <a href="#"> <button class="he-nav-buttom"> Sign In </button> </a> </li>
+                        <li class="he-nav-items"> <a href="/register-login"> <button class="he-nav-buttom"> Log In </button> </a> </li>
+                        <li class="he-nav-items"> <a href="/register-login"> <button class="he-nav-buttom"> Sign In </button> </a> </li>
                     </ul>
                 </nav>
         
             </div>
         
-        </header>
+     </header>
 
-        <footer id="page-footer">
+        
+    <!--IMAGEN DE FONDO HOME-->
+    <div class="background-image-box">
+        
+        <div id="background-image-icon">
+            <i class="fas fa-gift"></i>
+        </div>
+
+        <div id="background-image-text">
+            <div id="background-image-title">
+                <h6 >Sorpresa segura</h6>
+            </div>
+            <div id="background-image-p">
+                <p>Regalemos emociones</p>
+            </div>
+        </div>
+        
+        <div class="background-image">
+            <img class="w100" src="/img/background-image.jpg" alt="Background-image">
+        </div> 
+    </div>
+    
+
+    <!--MAIN-->
+    <main>
+        <!--SECCIÓN DE CATEGORÍAS DESTACADAS-->
+        <section class="featured-section">
+
+            <h3 class="section-categorys-title">Categorías destacadas</h3>
+
+            <div class="featured-categorys-box">
+
+                <article class="featured-category" id="sports-not-mobile">
+                    <div  class="featured-category-img-div"> 
+                        <img src="/img/sport.jpg" alt="sports-image" class="featured-category-img">
+                    </div>
+                    <div class="category-title">
+                        <h4 class="category-title-h4">Deporte</h4>
+                    </div>
+                </article>
+
+                <article class="featured-category" id="movies-not-mobile">  
+                    <div  class="featured-category-img-div"> 
+                        <img src="/img/movies.jpg" alt="movies-image" class="featured-category-img">
+                    </div>
+                    <div class="category-title">
+                        <h4 class="category-title-h4">Películas</h4>
+                    </div>
+                </article>
+
+                <article class="featured-category">  
+                    <div  class="featured-category-img-div"> 
+                        <img src="/img/music.jpg" alt="music-image" class="featured-category-img">
+                    </div>
+                    <div class="category-title">
+                        <h4 class="category-title-h4">Música</h4>
+                    </div>
+                </article>
+
+                <article class="featured-category"> 
+                    <div  class="featured-category-img-div"> 
+                        <img src="/img/tech.jpg" alt="tech-image" class="featured-category-img">
+                    </div>
+                    <div class="category-title">
+                        <h4 class="category-title-h4">Tecnología</h4>
+                    </div>
+                </article>
+
+                <article class="featured-category"> 
+                    <div  class="featured-category-img-div"> 
+                        <img src="/img/games.jpg" alt="games-image" class="featured-category-img">
+                    </div>
+                    <div class="category-title">
+                        <h4 class="category-title-h4">Juegos</h4>
+                    </div>
+                </article>
+
+                <article class="featured-category" id="food-not-mobile">  
+                    <div  class="featured-category-img-div"> 
+                        <img src="/img/food.jpg" alt="food-image" class="featured-category-img">
+                    </div>
+                    <div class="category-title">
+                        <h4 class="category-title-h4">Comida</h4>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!--SECCIÓN DE OFERTAS-->
+        <section class="featured-section">
+
+            <h3 class="section-offers-title">Ofertas</h3>
+
+            <div class="featured-offers-box">
+
+                <article class="featured-offer">
+                    <div  class="offer-img-div"> 
+                        <img src="/img/box-product.jpg" alt="SanValentin-image" class="featured-category-img">
+                    </div>
+                    <div class="offer-title">
+                        <h4 class="offer-title-h4">Caja San Valentín</h4>
+                        <p class="off">5%</p>
+                    </div>
+                </article>
+
+                <article class="featured-offer"  id="not-tablet-featured-offer">
+                    <div  class="offer-img-div"> 
+                        <img src="/img/box-product.jpg" alt="Juguetes-Infantil-image" class="featured-category-img">
+                    </div>
+                    <div class="offer-title">
+                        <h4 class="offer-title-h4">Caja Juguetes Infantil</h4>
+                        <p class="off">2%</p>
+                    </div>
+                </article>
+
+                <article class="featured-offer">
+                    <div  class="offer-img-div"> 
+                        <img src="/img/box-product.jpg" alt="Cine-image" class="featured-category-img">
+                    </div>
+                    <div class="offer-title">
+                        <h4 class="offer-title-h4">Caja Cine</h4>
+                        <p class="off">10%</p>
+                    </div>
+                </article>
+
+                <article class="featured-offer" id="not-tablet-featured-offer">
+                    <div  class="offer-img-div"> 
+                        <img src="/img/box-product.jpg" alt="Cocina-image" class="featured-category-img">
+                    </div>
+                    <div class="offer-title">
+                        <h4 class="offer-title-h4">Caja Cocina</h4>
+                        <p class="off">5%</p>
+                    </div>
+                </article>
+
+                <article class="featured-offer" id="not-mobile-tablet-featured-offer">
+                    <div  class="offer-img-div"> 
+                        <img src="/img/box-product.jpg" alt="Sweets-image" class="featured-category-img">
+                    </div>
+                    <div class="offer-title">
+                        <h4 class="offer-title-h4">Caja Sweets</h4>
+                        <p class="off">4%</p>
+                    </div>
+                </article>
+
+                <article class="featured-offer" id="not-mobile-tablet-featured-offer">
+                    <div  class="offer-img-div"> 
+                        <img src="/img/box-product.jpg" alt="Viajes-image" class="featured-category-img">
+                    </div>
+                    <div class="offer-title">
+                        <h4 class="offer-title-h4">Caja Viajes</h4>
+                        <p class="off">5%</p>
+                    </div>
+                </article>
+            </div>
+
+        </section>
+        
+        <!--SECCIÓN ESPACIO PARA EL ANUNCIO-->
+        <div id="banner">
+          
+            <div class="sale-image">
+                <div class="scroll-imagenes">
+                    <img src="/img/sale.jpg" alt="sale-image" class="sale-image">
+                </div>
+            </div>
+            
+            <div class="promociones-img">
+                <div class="scroll-imagenes">
+                    <img src="/img/promociones.jpg" alt="promociones-img" class="promociones-img">
+                </div>
+            </div>
+
+        </div>
+            
+        <!--SECCIÓN DE PRODUCTOS DESTACADOS-->
+        <section class="featured-section">
+
+            <h3 class="section-products-title">Productos destacados</h3>
+
+            <div class="featured-products-box">
+
+                <a href="/product-detail">
+                    <button class="product-button-link">
+                        <article class="featured-product">
+                            <div class="featured-product-img-div">
+                                <img src="/img/star-wars.jpg" alt="star-wars-image" class="featured-product-img">
+                            </div>
+                            <div class="product-title">
+                                <h5>Caja misteriosa Star Wars edition</h5>
+                                <div class="featured-product-description">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae fugiat omnis rem neque natus molestiae quam tenetur illum! Ratione delectus eos aut eveniet ab, iusto dolores quos veniam corporis inventore.</p>
+                                </div>
+                            </div>
+                        </article>                
+                    </button>
+                 </a>
+                
+                <a href="/product-detail">
+                    <button class="product-button-link">
+                        <article class="featured-product" id="featured-middle-product">
+                            <div class="featured-product-img-div">
+                                <img src="/img/pc-gaming.jpg" alt="star-wars-image" class="featured-product-img">
+                            </div>                  
+                            <div class="product-title">
+                                <h5>Caja misteriosa PC-Games edition</h5>
+                                <div class="featured-product-description">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae fugiat omnis rem neque natus molestiae quam tenetur illum! Ratione delectus eos aut eveniet ab, iusto dolores quos veniam corporis inventore.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </button>
+                </a>
+
+
+
+
+                <a href="/product-detail">
+                    <button class="product-button-link">
+                        <article class="featured-product">
+                            <div class="featured-product-img-div">
+                                <img src="/img/sweets.jpg" alt="star-wars-image" class="featured-product-img">
+                            </div>                 
+                            <div class="product-title">
+                                <h5>Caja misteriosa Halloween edition</h5>
+                                <div class="featured-product-description">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae fugiat omnis rem neque natus molestiae quam tenetur illum! Ratione delectus eos aut eveniet ab, iusto dolores quos veniam corporis inventore.</p>
+                                </div>
+                            </div>
+                        </article> 
+                    </button>                               
+                </a>
+            </div>
+            
+        </section>
+        
+    </main>
+
+
+    <!--FOOTER-->
+    <footer id="page-footer">
         
             <div class="footer">
         
@@ -86,7 +329,7 @@
                 </div>
             </div>
         
-        </footer>
+    </footer>
 
-     </body>
+</body>
 </html>
