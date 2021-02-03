@@ -1,0 +1,92 @@
+#page-footer{
+     background-color: white;
+     font-family: 'Bebas Neue';
+}
+
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0px;
+}
+
+.footer-list{
+      list-style-type: none;
+}
+
+.footer-hiper{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 40%;
+      font-size: 10px;
+
+}
+
+.footer-icons{
+    width: 30%;
+    text-align: center;
+}
+
+.footer-items{
+    display: flex;
+    justify-content: center;
+    font-family: Quicksand;
+}
+
+.fo-list-icon{
+     font-size: 15px;
+     padding: 3px 0px;
+     transition: all 450ms;
+}
+
+.logo-footer{
+     width: 45px;
+     transition: all 450ms;
+}
+
+.footer-img{
+    width: 30%;
+    text-align: center;
+}
+
+.footer-title{
+    font-weight: 400;
+     transition: all 450ms;
+}
+
+@media (min-width: 768px){
+   
+    .logo-footer{
+      width: 80px;
+    }
+
+    .fo-list-icon{
+     font-size: 25px;
+    }
+
+    .footer-hiper{
+     font-size: 16px;
+    }
+}
+
+@media (min-width: 1200px){
+     
+    .footer-title:hover{
+         color: #E5167F;
+          
+    } 
+
+    .fo-list-icon:hover{
+         color: #E5167F;
+          
+    } 
+
+    .logo-footer:hover{
+         width: 55px;
+         transform: rotate(360deg);
+    }
+}
