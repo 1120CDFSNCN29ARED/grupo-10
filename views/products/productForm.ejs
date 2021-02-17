@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/productDetail.css">
+    <link rel="stylesheet" href="/css/productForm.css">
     <link rel="stylesheet" href="/css/footer.css">
 
 </head>
@@ -60,59 +60,55 @@
     
     </header>
 
-    <main class="pd-main-section">
-        <article class="pd-main-article">
-        
-            <div class="pd-top-section">
-                <img src="/img/box-product.jpg" alt="Main Product" class="pd-main-product-img">
-            </div>
-        
-            <h2 class="pd-product-name-top">Nombre del Producto</h2>
-        
-            <div class="pd-bot-section">
-                <div class="pd-product-detail">
-                    <h2 class="pd-product-name-bot">Nombre del Producto</h2>
-                    <p>Descripcion del producto. Descripcion del producto. Descripcion del producto. Descripcion del producto.
-                        Descripcion del producto.</p>
+    <main class="main-form">
+
+        <section id="section-form">
+    
+            <form id="product-form" action="/" method="GET">
+                
+                <div class="input-box">
+                    <label class="la-bel" for="product-name">Nombre del producto:</label>
+                  <input class="in-put" type="text" name="product-name" placeholder="Nombre del producto" id="product-name" required>
                 </div>
-        
-                <div class="pd-product-price">
-                    <div class="pd-product-top">
-                            <div class="pd-price-share">
-                                <h2>Precio</h2>
-                                <button class="pd-share-button"><i class="fas fa-share-alt"></i></button>
-                            </div>
-                            <form action="" method="GET" class="pd-price-fee">
-                                <div>
-                                    <label for="">Cuotas:</label>
-                                    <select name="Cuotas" class="pd-fee-button">
-                                        <option value="1">1</option>
-                                        <option value="3">3</option>
-                                        <option value="6">6</option>
-                                        <option value="12">12</option>
-                                        <option value="18">18</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label for="">Unidades:</label>
-                                    <select name="Cuotas" class="pd-fee-button">
-                                        <option value="u-1">1</option>
-                                        <option value="u-2">2</option>
-                                        <option value="u-3">3</option>
-                                        <option value="u-4">4</option>
-                                        <option value="u-5">5</option>
-                                    </select>
-                                </div>
-                            </form>
-                    </div>
-                    <div class="pd-product-bot">
-                        <h2>Stock Disponible</h2>
-                        <button class="pd-cart-button">Agregar al Carrito</button>
-                    </div>
+          
+                <div class="input-box">
+                  <textarea class="in-put" name="description" id="description" cols="30" placeholder="Descripción del producto" rows="5"></textarea>
                 </div>
-            </div>
-        
-        </article>
+    
+                <div class="input-box">
+                    <label class="la-bel" for="category">Categoría:</label>
+                    <select class="in-put" id="category" name="category" placeholder="categorias">
+                        <option>Categoría</option>
+                        <option class="category-options" value="1">Deporte</option>
+                        <option class="category-options" value="2">Películas</option>
+                        <option class="category-options" value="3">Música</option>
+                        <option class="category-options" value="4">Tecnología</option>
+                        <option class="category-options" value="5">Juegos</option>
+                        <option class="category-options" value="6">Comida</option>
+                        <option class="category-options" value="7">Infantil</option>
+                        <option class="category-options" value="8">Viajes</option>
+                        <option class="category-options" value="9">Festividades</option>
+                      </select>
+                </div>
+    
+                <div class="input-box">
+                    <label class="la-bel" for="prize">Precio:</label>
+                    <input class="in-put" type="number" name="prize" placeholder="Precio" id="prize" required>
+                </div>
+
+                <div class="input-box">
+                    <label class="la-bel" for="product-image">Imagen del producto:</label>
+                    <input type="file" class="in-put" name="product-image" accept=".jpg" id="product-image"> 
+                </div>
+
+                <div class="input-box">
+                    <input id="send-button" type="submit" value="CARGAR PRODUCTO" >
+                </div>
+
+            </form>
+
+        </section>
+
     </main>
 
     <footer id="page-footer">

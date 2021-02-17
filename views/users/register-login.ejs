@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/login-register.css">
+</head>
+<body>
+
+    <!--HEADER-->
+    <header id="page-header">
+        <%- include('./partials/header') %>
+    </header>
+    
+    <!--LOG-IN REGISTER MAIN-->
+    <main >
+
+        <div id="register-login-main">
+
+            <section id="log-in">
+
+                <form id="log-in-form" action="/" method="GET">
+                    <h6 id="log-in-title">LOG-IN</h6>
+                    <div id="name-pass-box">
+                        <div class="login-input-box">
+                            <input class="in-put" type="text" name="user-name" placeholder="Nombre de usario" id="login-user-name">
+                        </div>
+        
+                        <div class="login-input-box">
+                            <input class="in-put" type="pass" name="pass" placeholder="Elegí tu contraseña" id="pass">
+                        </div>
+
+                    </div>
+                    <div class="input-box" id="remember-forgot-box">
+                        <div id="remember-me-box">
+                            <input type="checkbox" name="remember" id="remember">
+                            <label for="remember" id="remember-me-label">Permanecer conectado</label>
+                        </div>  
+                        <span id="forgot-span">¿Olvidaste tu contraseña?</span>
+                    </div>
+    
+                    <div class="input-box">
+                        <input id="log-in-button" type="submit" value="Iniciar sesión">
+                    </div>
+                          
+                </form>
+            </section>
+
+            <span>o</span>
+    
+            <section id="register">
+    
+                <form id="register-form" action="/" method="GET">
+                    <h6 id="check-in-title">REGISTRATE</h6>
+                    <div class="input-box">
+                      <input class="in-put" type="text" name="name" placeholder="Nombre y apellido" id="name" required>
+                    </div>
+              
+                    <div class="input-box">
+                      <input class="in-put" type="email" name="email" placeholder="E-mail" id="e-mail" required>
+                    </div>
+        
+                    <div class="input-box">
+                        <input class="in-put" type="text" name="user-name" placeholder="Nombre de usuario" id="user-name">
+                    </div>
+        
+                    <div class="input-box">
+                        <input class="in-put" type="date" name="birth-date" placeholder="Fecha de nacimiento" id="birth-date" required>
+                    </div>
+        
+                    <div class="input-box">
+                        <input class="in-put" type="text" name="adress" placeholder="Domicilio" id="adress" required>
+                    </div>
+          
+                    <div class="input-box">
+                        <input class="in-put" type="password" name="password" placeholder="Contraseña" id="contraseña">
+                    </div>    
+              
+                    <div class="input-box">
+                        <input id="send-button" type="submit" value="Registrarse" >
+                    </div>
+    
+                </form>
+    
+            </section>
+
+        </div>
+        
+    </main>
+
+
+    <!--FOOTER-->
+    <footer id="page-footer">
+        <%- include('./partials/footer') %>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

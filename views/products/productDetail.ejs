@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+</head>
+
+<body>
+    <header id="page-header">
+        <%- include('./partials/header') %>   
+    </header>
+
+    <main class="pd-main-section">
+        <article class="pd-main-article">
+        
+            <div class="pd-top-section">
+                <img src="/img/box-product.jpg" alt="Main Product" class="pd-main-product-img">
+            </div>
+        
+            <h2 class="pd-product-name-top">Nombre del Producto</h2>
+        
+            <div class="pd-bot-section">
+                <div class="pd-product-detail">
+                    <h2 class="pd-product-name-bot">Nombre del Producto</h2>
+                    <p>Descripcion del producto. Descripcion del producto. Descripcion del producto. Descripcion del producto.
+                        Descripcion del producto.</p>
+                </div>
+        
+                <div class="pd-product-price">
+                    <div class="pd-product-top">
+                            <div class="pd-price-share">
+                                <h2>Precio</h2>
+                                <button class="pd-share-button"><i class="fas fa-share-alt"></i></button>
+                            </div>
+                            <form action="" method="GET" class="pd-price-fee">
+                                <div>
+                                    <label for="">Cuotas:</label>
+                                    <select name="Cuotas" class="pd-fee-button">
+                                        <option value="1">1</option>
+                                        <option value="3">3</option>
+                                        <option value="6">6</option>
+                                        <option value="12">12</option>
+                                        <option value="18">18</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="">Unidades:</label>
+                                    <select name="Cuotas" class="pd-fee-button">
+                                        <option value="u-1">1</option>
+                                        <option value="u-2">2</option>
+                                        <option value="u-3">3</option>
+                                        <option value="u-4">4</option>
+                                        <option value="u-5">5</option>
+                                    </select>
+                                </div>
+                            </form>
+                    </div>
+                    <div class="pd-product-bot">
+                        <h2>Stock Disponible</h2>
+                        <button class="pd-cart-button">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        
+        </article>
+    </main>
+
+    <footer id="page-footer">
+        <%- include('./partials/footer') %>
+    </footer>
+
+</body>
+
+</html>
