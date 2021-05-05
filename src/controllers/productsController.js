@@ -1,8 +1,6 @@
-const path = require('path');
-
 const productsController = {
     'index': (req, res) => {
-        res.render('productsIndex.ejs');
+        res.render('products');
     }
 
 }
