@@ -2,62 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Box para Vos</title>
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/header.css">
+    <%- include('../partials/head') %>
     <link rel="stylesheet" href="/css/productForm.css">
-    <link rel="stylesheet" href="/css/footer.css">
 
 </head>
 
 <body>
     <header id="page-header">
-        <div class="main-header">
-    
-            <nav class="he-nav-content">
-                <ul class="he-nav-list">
-                    <li class="he-nav-items"> <a href="/"> <button class="he-nav-buttom"> Home </button> </a> </li>
-                    <li class="he-nav-items"> <a href="#"> <button class="he-nav-buttom"> Categorias </button> </a> </li>
-                    <li class="he-nav-items"> <a href="#"> <button class="he-nav-buttom"> Contacto </button> </a> </li>
-                </ul>
-            </nav>
-    
-            <div class="he-left-items">
-                <button class="header-button he-bar-button">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-    
-            <a href="/"><img src="/img/BoxParaVosLogo.png" alt="BoxParaVos-Logo" class="he-logo"></a>
-    
-            <div class="he-rigth-item">
-                <button class="header-button he-user-button">
-                    <i class="fas fa-user"></i>
-                </button>
-            </div>
-    
-            <nav class="he-nav-content">
-                <ul class="he-nav-list">
-                    <li class="he-nav-items"> <a href="/product-cart"> <button class="he-nav-buttom"> Carrito </button> </a>
-                    </li>
-                    <li class="he-nav-items"> <a href="/register-login"> <button class="he-nav-buttom"> Log In </button> </a> </li>
-                    <li class="he-nav-items"> <a href="/register-login"> <button class="he-nav-buttom"> Sign In </button> </a> </li>
-                </ul>
-            </nav>
-    
-        </div>
-    
+        <%- include('../partials/header') %>
     </header>
 
     <main class="main-form">
@@ -112,33 +64,7 @@
     </main>
 
     <footer id="page-footer">
-
-        <div class="footer">
-
-            <div class="footer-img">
-                <img src="/img/BoxParaVosLogo.png" alt="BoxParaVos-Logo" class="logo-footer">
-            </div>
-
-            <div class="footer-hiper">
-                <h2 class="footer-title">Contacto</h2>
-                <div class="footer-hiper-content">
-                    <ul class="footer-list">
-                        <li class="footer-items">351-2548-9854</li>
-                        <li class="footer-items">boxparavos@dhmail.com</li>
-                        <li class="footer-items">BsAs, Argentina</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-icons">
-                <ul class="footer-list">
-                    <li class="footer-items fo-list-icon"> <i class="fab fa-instagram"></i> </li>
-                    <li class="footer-items fo-list-icon"> <i class="fab fa-facebook-square"></i> </li>
-                    <li class="footer-items fo-list-icon"> <i class="fab fa-pinterest-square"></i> </li>
-                </ul>
-            </div>
-        </div>
-
+        <%- include('../partials/footer') %>
     </footer>
 
 </body>

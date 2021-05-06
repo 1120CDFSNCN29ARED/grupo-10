@@ -6,6 +6,7 @@ const app = express();
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/usersRoutes');
 const productsRouter = require('./routes/productsRoutes');
+const contactRouter = require('./routes/contactRoutes');
 
 // view engine setup
 app.set('views', path.resolve(__dirname, './views'));
@@ -16,6 +17,7 @@ app.use(express.static(path.resolve(__dirname, '../public')));
 app.use('/', indexRouter);
 app.use(usersRouter);
 app.use(productsRouter);
+app.use(contactRouter);
 
 
 
