@@ -9,10 +9,20 @@ const productsController = {
         res.render('../views/products/productDetail');
     },
     'productForm': (req, res) => {
-        res.render('../views/products/productForm');
+        res.render('../views/products/createProduct');
     },
     'categories': (req, res) => {
         res.render('../views/products/categories');
+    },
+    'createProduct': (req, res) => {
+        let product = {
+            name: req.body.productName,
+            description: req.body.description,
+            category: req.body.category,
+            prize: req.body.prize,
+            productImage: req.body.productImage
+        };
+        res.send(product)
     }
 
 }

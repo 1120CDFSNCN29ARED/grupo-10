@@ -3,7 +3,7 @@
 
 <head>
     <%- include('../partials/head') %>
-    <link rel="stylesheet" href="/css/productForm.css">
+    <link rel="stylesheet" href="/css/createProduct.css">
 
 </head>
 
@@ -16,11 +16,11 @@
 
         <section id="section-form">
     
-            <form id="product-form" action="/" method="GET">
+            <form id="product-form" action="/products/createProduct" method="POST">
                 
                 <div class="input-box">
                     <label class="la-bel" for="product-name">Nombre del producto:</label>
-                  <input class="in-put" type="text" name="product-name" placeholder="Nombre del producto" id="product-name" required>
+                    <input class="in-put" type="text" name="productName" placeholder="Nombre del producto" id="product-name" required>
                 </div>
           
                 <div class="input-box">
@@ -50,11 +50,11 @@
 
                 <div class="input-box">
                     <label class="la-bel" for="product-image">Imagen del producto:</label>
-                    <input type="file" class="in-put" name="product-image" accept=".jpg" id="product-image"> 
+                    <input type="file" class="in-put" name="productImage" accept=".jpg" id="product-image"> 
                 </div>
 
                 <div class="input-box">
-                    <input id="send-button" type="submit" value="CARGAR PRODUCTO" >
+                    <button id="send-button" type="submit">CARGAR PRODUCTO</button>
                 </div>
 
             </form>

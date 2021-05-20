@@ -14,6 +14,9 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.resolve(__dirname, '../public')));
 
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+
 app.use('/', indexRouter);
 app.use(usersRouter);
 app.use(productsRouter);
@@ -24,3 +27,5 @@ app.use(contactRouter);
 app.listen( 3005, () => {
     console.log('Servidor corriendo');
 });
+
+
