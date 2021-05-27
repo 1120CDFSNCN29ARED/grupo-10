@@ -9,8 +9,7 @@ const usersController = {
     'register': (req, res) => {
         res.render('../views/users/register-login');
     },
-    'registerUser': (req, res) => {
-        
+    'registerUser': (req, res) => {    
         let user = {
             name: req.body.name,
             email: req.body.email,
@@ -20,8 +19,6 @@ const usersController = {
             password: req.body.password
         };
         res.send(user);
-
-
 
     },
     'login': (req, res) => { 

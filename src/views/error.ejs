@@ -1,3 +1,25 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/error.css">
+</head>
+
+<body>
+    <header id="page-header">
+        <%- include('./partials/header') %>   
+    </header>
+
+    <main>
+        <img src="/img/error.jpg" alt="error-image">
+
+    </main>
+
+    <footer id="page-footer">
+        <%- include('./partials/footer') %>
+    </footer>
+
+</body>
+
+</html>

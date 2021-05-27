@@ -120,7 +120,6 @@
 }
 .offer-img-div > img {
     object-fit: cover;
-
 }
 
 .featured-categorys-box {
@@ -281,6 +280,16 @@ h5 {
     }
     .off {
         font-size: 2.5vw;
+    }
+    .featured-products-box {
+        display: flex;
+        margin: auto auto 2% auto;
+        padding: 1%;
+        flex-wrap: wrap;   
+        width: 90%;
+        margin: 0px auto auto auto;
+        justify-content:space-around;
+        align-content: space-around;  
     }
 }
 
