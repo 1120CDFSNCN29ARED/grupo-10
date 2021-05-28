@@ -1,4 +1,4 @@
-
+const fs = require('fs');
 const usersController = {
     'profile': (req, res) => {
         res.render('../views/users/profile');
@@ -18,7 +18,9 @@ const usersController = {
             adress: req.body.adress,
             password: req.body.password
         };
-        res.send(user);
+        let userJSON = JSON.stringify(user);
+        fs.appendFileSync('usersData', userJSON);
+        res.redirect('/');
 
     },
     'login': (req, res) => { 

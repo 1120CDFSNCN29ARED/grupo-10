@@ -1,3 +1,6 @@
+const fs = require('fs');
+
+
 const productsController = {
     'products': (req, res) => {
         res.render('../views/products/products');
@@ -11,8 +14,8 @@ const productsController = {
     'productCreate': (req, res) => {
         res.render('../views/products/createProduct');
     },
-    'productEdit': (req, res) => {
-        res.render('../views/products/editProduct');
+    'productEdit': (req, res) => {          
+        res.render('../views/products/editProduct', );
     },
     'categories': (req, res) => {
         res.render('../views/products/categories');
@@ -28,7 +31,9 @@ const productsController = {
             prize: req.body.prize,
             productImage: req.body.productImage
         };
-        res.send(product)
+        let productJSON = JSON.stringify(product);
+        fs.appendFileSync('productsData', productJSON);
+        res.redirect('/products/createProduct');
     },
     'editProduct': (req, res) => {
         let product = {
