@@ -1,119 +1,186 @@
-#page-header{
-    background-color: white;
+/*Sección Header*/
+.header-section{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0px 25px;
+     position: relative;
 }
 
-.main-header{  
-    width: 100vw;
-    height: 60px;
-    padding: 0px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/*Header Logo*/
+#dm-logo{
+     height: 20vw;
 }
 
-.he-logo{
-     width: 55px;
-     transition: all 650ms;
-     background-image: url(/img/BoxParaVosLogoPregunta.png);
-}
-
-.he-left-items{
-    display: flex;
-    flex-direction: row;
-}
-
+/*Botones Header*/
 .header-button{
-    width: 48px;
-    height: 48px;
-    border: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    border: none;
+     border: none;
+     background-color: transparent;
 }
 
-.header-button i{
-    font-size: 20px;
+/*Iconos Botones*/
+.header-icons{
+     font-size: 6vw;
+     padding: 0px 20px;
+     color: white;
 }
 
-.he-right-items{
-    display: flex;
-    flex-direction: row;
+/*Botones Laptop*/
+.header-laptop-buttons{
+     display: none;
 }
 
-.he-nav-list a{
-      text-decoration: none;
-      color: black;
-}
-
-.he-nav-list {
-      list-style-type: none;
-      display: flex;
-      flex-direction: row;
-}
-
-#he-nav-bar {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      background-color: rgba(255, 255, 255, 0.4);
-}
-
-.he-nav-items{
-      width: 100%;
-      height: 80px;
-}
-
-.he-nav-content{
-      width: 40%;
-      text-align: center;
-      display: none;
-}
-
-.he-nav-buttom{
-      width: 100%;
-      height: 100%;
-      background-color: transparent;
-      border: transparent;
-      font-size: 1.5vw;
-      border-radius: 5px;
-      transition: all 450ms;
-      font-family: 'Bebas Neue';
-}
-
-
+/*Tablet View*/
 @media (min-width: 768px){
-
-    .header-button{
-        display: none;
+    
+    /*Header Logo*/
+    .header-logo{
+         order: -1;
+         padding-left: 25px;
     }
 
-    .main-header{
-        height: 100px;
+    #dm-logo{
+         height: 10vw;
     }
 
-    .he-logo{
-     width: 80px;
+    /*Boton Carrito*/
+    #header-button-cart{
+         position: absolute;
+         display: flex;
+         right: 10vw;
     }
 
-    .he-nav-content{
-      display: inline;
+    /*Boton Usuario*/
+    #header-button-user{
+         position: absolute;
+         display: flex;
+         right: 5vw;
     }
 
+    /*Iconos Botones*/
+    .header-icons{
+         font-size: 3vw;
+    }
 }
 
+/*Laptop View*/
 @media (min-width: 1200px){
-     .he-nav-buttom:hover{
-         color: #E5167F;
-         font-size: 2vw;
-          
-    } 
-
-    .he-logo:hover{
-         width: 55px;
-         transform: rotate(360deg);
+    
+    /*Sección Header*/
+    .header-section{
+         padding: 0px 50px;
     }
+    
+    /*Seccion Botones*/
+    .header-laptop-buttons{
+         display: flex;
+         width: 30%;
+    }
+
+    /*Botones Carrito y User (Mobile/Tablet)*/
+    #header-button-cart, #header-button-user{
+         display: none;
+     }
+
+     /*Lista Botones*/
+     .header-list, .header-list a{
+         display: flex;
+         list-style-type: none;
+         text-decoration: none;
+         color: black;      
+     }
+
+     .header-list{
+         display: flex;
+         justify-content: flex-end;
+         text-align: center;
+         align-items: center;
+         width: 100%;
+     }
+     
+     /*Botones*/
+     .header-laptop-items{
+         font-size: 1.7vw;
+         padding: 5px 10px;
+         margin: 0px 5px;
+         border: none;
+         border-radius: 4px;
+         font-family: 'Bebas Neue', sans-serif;
+     }
+
+     /*Boton Carrito*/
+     .cart-button{
+         background-color: transparent;
+         font-size: 1.5vw;
+         margin-right: 10px;
+         padding: 0px;
+         display: flex;
+         color: white;
+     }
+
+     /*Icono Carrito*/
+     .cart-icon{
+         display: flex;
+     }
+          
+}
+
+/*<----Sección Boton Busqueda---->*/
+
+/*Boton de Busqueda*/
+.search-buttom{
+      display: none;
+      align-items: center;
+      width: 50%;
+}
+
+.form-search{
+      display: flex;
+      align-items: center;
+      width: 100%;
+}
+
+/*Buscador*/
+.input {
+      background-color: white;
+      border: none;
+      outline: none;
+      color: #666;
+      padding: 5px;
+      font-size: 20px;
+      width: 100%;
+      border-radius: 4px;
+}
+
+/*Boton Buscador*/
+.submit {
+      background-color: white;
+      border: none;
+      color: #666;
+      padding: 5px;
+      font-size: 20px;
+      border-radius: 4px;
+      margin-left: -10px;
+}
+
+/*Tablet View*/
+@media (min-width: 768px){
+     
+     /*Boton de Busqueda*/
+     .search-buttom{
+           display: flex;
+           position: absolute;
+           left: 25vw;
+          
+     }
+     
+}
+
+/*Laptop View*/
+@media (min-width: 1200px){
+
+     /*Boton de Busqueda*/
+     .search-buttom{
+           display: none;
+     }
 }

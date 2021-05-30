@@ -1,0 +1,76 @@
+/*PRODUCT-FORM*/
+
+#pe-section-form {
+    display: flex;
+    max-width: 768px;
+    margin: 2vh auto;
+    border-radius: 3px;
+    background-color: rgba(192, 192, 192, 0.5);
+    align-content: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+#pe-form {
+    width: 100%;
+    margin: 20px 10px;
+    justify-items: center;
+    
+}
+#pe-form-title {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    justify-items: center;
+    text-align: center;
+}
+
+/*font-family: "Bebas Neue";*/
+
+.pe-input-box {  
+    display: flex;
+    width: 100%;
+    margin: 2% auto;
+    justify-content:space-between;
+    align-content: space-around; 
+}
+.in-put {    
+    color: #666;    
+    border-radius: 3px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-style: none;
+    padding: 10px;
+    background-color:white;
+}
+.la-bel{
+    width: 15vw;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+#send-button {
+    background-color: rgb(63, 120, 224);
+    color: white;
+    border-radius: 3px;
+    border-style: none;
+    padding: 2%;
+    width: 100%;
+    transition: all 150ms;
+}
+
+
+
+/*MEDIA QUERIES*/
+
+@media (min-width: 768px){
+    .la-bel{
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1200px){
+    #send-button:hover {
+        background-color: rgb(184, 75, 108);
+    }
+}

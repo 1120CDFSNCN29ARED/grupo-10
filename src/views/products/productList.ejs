@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head') %>
+
+<body>
+    <%- include('../partials/header') %>
+
+    <!--Pagina Listado-->
+    <main class="pf-main-page">
+           
+        <!--Seccion Productos-->
+        <section class="pf-main-section">
+            <% const num= productos.length %>
+                <% for (let i=0; i < num; i++) { %>
+                    <article class="home-article">
+
+                        <img src="/img/Products-Images/<%= productos[i].product_image %>" alt="Product-Image1" class="product-images">
+                    
+                        <h3 class="home-article-title"><%= productos[i].productname%></h3>
+                    
+                        <h4 class="home-article-price"><%= productos[i].prize%>USD</h4>
+                    
+                        <div class="home-article-button">
+                    
+                            <form action="/product/list?_method=DELETE" method="POST" class="home-article-form">
+                                <button type="submit" class="article-button-comprar" value="<%= productos[i].id%>" name="id">Borrar</button>
+                            </form>
+                    
+                            <form action="/product/Edit/:<%= productos[i].id%>" method="GET" class="home-article-form">
+                                <button type="submit" class="article-button-ver">Editar</button>
+                            </form>
+                    
+                        </div>
+                    </article>
+                <% } %>
+
+        </section>
+    </main>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>

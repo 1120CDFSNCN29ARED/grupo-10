@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<%- include('../partials/head') %>
+
+<body>
+    <%- include('../partials/header') %>
+
+    <!--Pagina Log-In-->
+    <main class="li-main-page">
+     
+        <section class="li-main-section">
+     
+            <form action="#" method="GET" class="li-main-form">
+                
+                <!--Titulo-->
+                <h1 class="li-main-title">Ingresá tus Datos</h1>
+     
+                <!--Campos a Llenar-->
+                <div class="li-main-input-data">
+                    <input class="li-main-in-put" type="text" name="userName" placeholder=" Nombre de Usuario" >
+                    <input class="li-main-in-put" type="password" name="password" placeholder=" Contraseña"> 
+                </div>
+     
+                <!--Recordatorios-->
+                <div class="li-main-remember">
+     
+                    <!--Permanecer Conectado-->
+                    <div class="li-main-remember-imput">
+                        <input type="checkbox" name="remember" >
+                        <label for="remember" class="li-main-remember-content">Permanecer conectado</label>
+                    </div>
+     
+                    <!--Contraseña Olvidada-->
+                    <span class="li-main-remember-content">¿Olvidaste tu contraseña?</span>
+                </div>
+     
+                <!--Boton Iniciar Seción-->
+                <button type="submit" class="li-main-button">Iniciar sesión</button>
+             </form>
+        </section>
+    </main>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>

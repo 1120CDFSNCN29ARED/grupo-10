@@ -1,0 +1,102 @@
+/*Pagina Log-In*/
+.li-main-page{  
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.li-main-section{
+    width: 100%;
+    padding: 20px 10px;
+    background-color: rgba(192, 192, 192, 0.5);
+    border-radius: 3px;
+    max-width: 768px;
+    margin: 30px 0 60px;
+}
+
+.li-main-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Titulo de la Pagina*/
+.li-main-title{
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+/*Sección Campos a Llenar*/
+.li-main-input-data{
+    width: 100%;
+}
+
+/*Campo a llenar*/
+.li-main-in-put{
+    color: #666;    
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+/*Sección Recordatorios*/
+.li-main-remember{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+/*Contraseña Olvidada*/
+.li-main-remember-content{
+    font-size: 10px;
+    font-weight: 300;
+}
+
+/*Permanecer Conectado*/
+.li-main-remember-imput{
+    display: flex;
+    align-items: center;
+}
+
+/*Boton Iniciar Seción*/
+.li-main-button{
+    width: 40%;
+    font-size: 15px;
+    margin-top: 15px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(63, 120, 224);
+    color: white;
+}
+
+/*Tablet View*/
+@media (min-width: 768px){
+    
+    /*Titulo de la Pagina*/
+    .li-main-title{
+        font-size: 25px;
+    }
+
+    /*Contraseña Olvidada*/
+    .li-main-remember-content{
+        font-size: 15px;
+    }
+
+    /*Boton Iniciar Seción*/
+    .li-main-button{
+        font-size: 20px;
+        padding: 10px;
+    }
+}
+.li-main-button:hover{
+    background-color: rgb(119, 80, 180);
+    transition: all 0.2s;
+}

@@ -1,0 +1,18 @@
+[
+ {
+  "productname": "Hojas Color Rojo",
+  "category": "librery",
+  "prize": "23",
+  "product_image": "Product-Image1.jpg",
+  "description": "colores",
+  "id": 3
+ },
+ {
+  "productname": "lapiceras",
+  "category": "librery",
+  "prize": "2",
+  "product_image": "Product-Image1.jpg",
+  "description": "cosas",
+  "id": 4
+ }
+]

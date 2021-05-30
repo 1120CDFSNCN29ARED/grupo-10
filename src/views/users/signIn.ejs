@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head') %>
+
+<body>
+    <%- include('../partials/header') %>
+
+    <!--Pagina Sign In-->
+    <main class="li-main-page">
+     
+        <section class="li-main-section">
+     
+            <form action="/sign-in" method="POST" class="li-main-form">
+     
+                <!--Titulo-->
+                <h1 class="li-main-title">Registrate</h1>
+     
+                <!--Campos a Llenar-->
+                <div class="li-main-input-data">
+                    <input class="li-main-in-put" type="text" name="name" placeholder="Nombre y apellido" required>
+                    <input class="li-main-in-put" type="email" name="email" placeholder="E-mail" required>
+                    <input class="li-main-in-put" type="text" name="userName" placeholder="Nombre de usuario">
+                    <input class="li-main-in-put" type="date" name="birthDate" placeholder="Fecha de nacimiento" required>
+                    <input class="li-main-in-put" type="text" name="adress" placeholder="Domicilio" required>
+                    <input class="li-main-in-put" type="password" name="password" placeholder="Contraseña" required>
+                </div>
+     
+                <!--Boton Registrarse-->
+                <button type="submit" class="li-main-button">Registrarse</button>
+            </form>
+        </section>
+    </main>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>

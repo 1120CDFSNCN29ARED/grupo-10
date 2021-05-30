@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head') %>
+
+<body class="pe-body">
+    <%- include('../partials/header') %>
+
+    <main class="pe-main">
+        <section id="pe-section-form">        
+    
+            <form id="pe-form" action="/products/createProduct?_method=PUT" method="POST">
+                
+                <h1 id="pe-form-title">Editar producto</h1>
+
+                <div class="pe-input-box">
+                    <label class="la-bel" for="productname">Nombre del producto:</label>
+                    <input class="in-put" type="text" name="productname" placeholder="Nombre del producto" id="product-name" required>
+                </div>
+           
+                <div class="pe-input-box">
+                    <label class="la-bel" for="category">Categoría:</label>
+                    <select class="in-put" id="category" name="category" placeholder="categorias">
+                        <option>Categoría</option>
+                        <option class="category-options" value="1">Deporte</option>
+                        <option class="category-options" value="2">Películas</option>
+                        <option class="category-options" value="3">Música</option>
+                        <option class="category-options" value="4">Tecnología</option>
+                        <option class="category-options" value="5">Juegos</option>
+                        <option class="category-options" value="6">Comida</option>
+                        <option class="category-options" value="7">Infantil</option>
+                        <option class="category-options" value="8">Viajes</option>
+                        <option class="category-options" value="9">Festividades</option>
+                      </select>
+                </div>
+    
+                <div class="pe-input-box">
+                    <label class="la-bel" for="prize">Precio:</label>
+                    <input class="in-put" type="number" name="prize" placeholder="Precio" id="prize" required>
+                </div>
+
+                <div class="pe-input-box">
+                    <label class="la-bel" for="productImage">Imagen del producto:</label>
+                    <input type="file" class="in-put" name="product_image" accept=".jpg" id="productImage"> 
+                </div>
+
+                <div class="pe-input-box">
+                    <textarea class="in-put" name="description" id="description" cols="30" placeholder="Descripción del producto" rows="5"></textarea>
+                </div>
+
+                <div class="pe-input-box">
+                    <button id="send-button" type="submit">CARGAR PRODUCTO</button>
+                </div>
+
+            </form>
+
+        </section>
+    </main>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>
