@@ -1,75 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <%- include('../partials/head') %>
-    <link rel="stylesheet" href="/css/productDetail.css">
-</head>
+<%- include('../partials/head') %>
 
-<body>
-    <header id="page-header">
-        <%- include('../partials/header') %>   
-    </header>
+<body id="pd-body">
+    <%- include('../partials/header') %>
 
-    <main class="pd-main-section">
+    <!--Pagina Detalle Producto-->
+    <main class="pd-main">
+
+        <!--Sección Producto-->
         <article class="pd-main-article">
-        
-            <div class="pd-top-section">
-                <img src="/img/box-product.jpg" alt="Main Product" class="pd-main-product-img">
-            </div>
-        
-            <h2 class="pd-product-name-top">Nombre del Producto</h2>
-        
-            <div class="pd-bot-section">
-                <div class="pd-product-detail">
-                    <h2 class="pd-product-name-bot">Nombre del Producto</h2>
-                    <p>Descripcion del producto. Descripcion del producto. Descripcion del producto. Descripcion del producto.
-                        Descripcion del producto.</p>
-                </div>
-        
-                <div class="pd-product-price">
-                    <div class="pd-product-top">
-                            <div class="pd-price-share">
-                                <h2>Precio</h2>
-                                <button class="pd-share-button"><i class="fas fa-share-alt"></i></button>
-                            </div>
-                            <form action="" method="GET" class="pd-price-fee">
-                                <div>
-                                    <label for="">Cuotas:</label>
-                                    <select name="Cuotas" class="pd-fee-button">
-                                        <option value="1">1</option>
-                                        <option value="3">3</option>
-                                        <option value="6">6</option>
-                                        <option value="12">12</option>
-                                        <option value="18">18</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label for="">Unidades:</label>
-                                    <select name="Cuotas" class="pd-fee-button">
-                                        <option value="u-1">1</option>
-                                        <option value="u-2">2</option>
-                                        <option value="u-3">3</option>
-                                        <option value="u-4">4</option>
-                                        <option value="u-5">5</option>
-                                    </select>
-                                </div>
-                            </form>
+          
+            <!--Producto IMG-->
+            <img src="/img/Products-Images/<%= producto.product_image %>" alt="Product-1" class="pd-product-image">
+          
+            <!--Producto Info-->
+            <div class="pd-article-data">
+          
+                <!--Producto Titulo y Cantidad-->
+                <div class="pd-article-data-price-section">
+          
+                    <!--Titulo y Precio-->
+                    <div>
+                        <h1 class="pd-article-title"><%= producto.productname %></h1>
+                        <h2 class="pd-article-price"><%= producto.prize %> USD</h2>
                     </div>
-                    <div class="pd-product-bot">
-                        <h2>Stock Disponible</h2>
-                        <button class="pd-cart-button">Agregar al Carrito</button>
+          
+                    <!--Cantidad-->
+                    <div class="pd-article-quantity">
+          
+                        <h1 class="pd-article-quantity-title">Cantidad</h1>
+          
+                        <select name="product-quantity" id="pd-quantity-button">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
                     </div>
                 </div>
+          
+                <!--Boton Agregar al Carrito-->
+                <button class="pd-article-buy-button">Agregar al Carrito</button>
+          
+                <!--Descripción-->
+                <div class="pd-article-description">
+          
+                    <!--Titulo Descripción-->
+                    <h1 class="pd-article-description-title">Descripcion</h1>
+                    <!--Producto Descripción-->
+                    <h2 class="pd-article-description-text">· 8 – 1/2 x 11" Carta Tamaño Papel blanco brillante proporciona mejor contraste. Funciona bien en fotocopiadoras, impresoras de inyección de tinta o láser. Sin ácido para calidad de archivo papel divertido, funcional para su oficina. Poly-wrapped resmas proporcionar atractivo visual y protección resistencia. Costo el mismo como el papel normal.</h2>
+                </div>
             </div>
-        
         </article>
     </main>
 
-    <footer id="page-footer">
-        <%- include('../partials/footer') %>
-    </footer>
-
+    <%- include('../partials/footer') %>
 </body>
-
 </html>

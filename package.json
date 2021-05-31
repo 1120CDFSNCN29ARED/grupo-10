@@ -1,9 +1,10 @@
 {
-  "name": "grupo-10",
+  "name": "dunder-mifflin-web-site",
   "version": "1.0.0",
-  "description": "Esta página esta destinada para aquellas personas que quieran hacer un regalo especial.",
-  "main": "index.js",
+  "description": "",
+  "main": "home.js",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "method-override": "^3.0.0",
@@ -17,6 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/1120CDFSNCN29ARED/grupo-10.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {

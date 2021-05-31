@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head') %>
+
+<body>
+    <%- include('../partials/header') %>
+
+    <!--Pagina Sign In-->
+    <main class="li-main-page">
+     
+        <section class="li-main-section">
+     
+            <form action="/users/edit/<%= usuarioAEditar.id %>?_method=PUT" method="POST" class="li-main-form">
+     
+                <h1 class="li-main-title">Editar <%= usuarioAEditar.name %></h1>
+     
+                <div class="li-main-input-data">
+                    <input class="li-main-in-put" type="text" name="name" placeholder="<%= usuarioAEditar.name %>" required>
+                    <input class="li-main-in-put" type="email" name="email" placeholder="<%= usuarioAEditar.email %>" required>
+                    <input class="li-main-in-put" type="text" name="userName" placeholder="<%= usuarioAEditar.userName %>" required>             
+                    <input class="li-main-in-put" type="file"  name="avatar" accept=".jpg" >
+                    <input class="li-main-in-put" type="password" name="password" placeholder="Contraseña" required>
+                </div>
+     
+                <button type="submit" class="li-main-button" value="<%= usuarioAEditar.id %>" name="id">Editar</button>
+            </form>
+        </section>
+    </main>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>

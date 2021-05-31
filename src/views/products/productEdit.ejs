@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head') %>
+
+<body class="pe-body">
+    <%- include('../partials/header') %>
+
+    <main class="pe-main">
+        <section id="pe-section-form">        
+    
+            <form id="pe-form" action="/product/edit/<%= productoAEditar.id %>?_method=PUT" method="POST">
+                
+                <h1 id="pe-form-title">Editar producto <%= productoAEditar.productname %></h1>
+
+                <div class="pe-input-box">
+                    <label class="la-bel" for="productname">Nombre del producto:</label>
+                    <input class="in-put" type="text" name="productname" placeholder="<%= productoAEditar.productname %>" id="product-name">
+                </div>
+           
+                <div class="pe-input-box">
+                    <label class="la-bel" for="category">Categoría:</label>
+                    <select class="in-put" id="category" name="category" placeholder="categorias">
+                        <option><%= productoAEditar.category %></option>
+                        <option value="all">Todos</option>
+                        <option value="paper">Resmas</option>
+                        <option value="librery">Libreria</option>
+                        <option value="office-products">Equipamiento para la Oficina</option>
+                        <option value="merch">Merchandising</option>
+                      </select>
+                </div>
+    
+                <div class="pe-input-box">
+                    <label class="la-bel" for="prize">Precio:</label>
+                    <input class="in-put" type="number" name="prize" placeholder="<%= productoAEditar.prize %>" id="prize" >
+                </div>
+
+                <div class="pe-input-box">
+                    <label class="la-bel" for="productImage">Imagen del producto:</label>
+                    <input type="file" class="in-put" name="product_image" accept=".jpg" id="productImage"> 
+                </div>
+
+                <div class="pe-input-box">
+                    <textarea class="in-put" name="description" id="description" cols="30" placeholder="<%= productoAEditar.description %>" rows="5"></textarea>
+                </div>
+
+                <div class="pe-input-box">
+                    <button id="send-button" type="submit" value="<%= productoAEditar.id %>" name="id">CARGAR PRODUCTO</button>
+                </div>
+
+            </form>
+
+        </section>
+    </main>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>

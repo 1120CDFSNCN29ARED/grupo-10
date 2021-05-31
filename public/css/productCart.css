@@ -1,207 +1,161 @@
- /*Tamaños y detalles*/
-.pc-product-img{
-     width: 20%;
-     padding: 5px 0px;
-}
-
-.pc-main-price {
-     font-family: Bebas Neue;
-     font-size: 14px;
-     font-weight: 400;
-     text-align: center;
-}
-
-.pc-product-title{
-     font-family: Bebas Neue;
-     font-size: 16px;
-     font-weight: 400;
-     max-width: 100px;
-}
-
-.pc-product-description{
-     font-size: 10px;
-     width: 300px;
-     display: none;
-}
-
-#pc-quantity-button{
-     width: 30px;
-     height: 15px;
-     border: none;
-     background-color:  #E5167F;
-     color: white;
-     border-radius: 3px;
-     font-size: 10px;
-     margin: 0;
-     padding: 0;
-}
-
-#pc-trash-button{
-     width: 25px;
-     height: 25px;
-     background-color: #E5167F;
-     color: white;
-     border: none;
-     border-radius: 5px;
-     font-size: 8px;
-     transition: all 450ms;
-}
-/*Article Section*/
-
-.pc-top-section{
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-}
-
-.pc-article-section{
-     display: flex;
-     flex-wrap: wrap;
-     flex-direction: row;
-     align-items: center;
-     justify-content: center;
-     border: none;
-     margin: 10px 15px;
-     background-color: white;
-     border-radius: 5px;
-     max-width: 700px;
-}
-
-.pc-article-left-section{
-     display: flex;
-     flex-wrap: wrap;
-     flex-direction: row;
-     align-items: center;
-     justify-content: space-around;
-     width: 60%;
-}
-
-.pc-article-right-section{
-     display: flex;
-     flex-wrap: wrap;
-     flex-direction: row;
-     align-items: center;
-     justify-content: space-around;
-     width: 40%;
-}
-
-.pc-price-container{
-     display: flex;
-     flex-direction: column;
-     text-align: center;
-}
-
-.pc-price-container h3{
-     font-size: 6px;
-}
-
-/*Buy Section*/
-
-.pc-buy-article{
-    width: 100%;
-    max-width: 888.16px;
+/*Pagina Carrito*/
+.pc-main{
+    font-family: 'Roboto', sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column; 
+    align-items: center;
+    margin: 30px 0 60px;
 }
 
-.pc-buy-section{
-     display: flex;
-     flex-direction: column;
-     border: none;
-     border-radius: 5px;
-     background-color: white;
-     margin: 10px 15px;
-     width: 100%;
-     max-width: 400px;
+/*Caja Producto*/
+.pc-product-article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(192, 192, 192, 0.5);
+    border-radius: 3px;
+    margin: 5px 0;
+    width: 100%;
 }
 
-.pc-buy-top{
-     display: flex;
-     flex-direction: row;
-     justify-content: space-around;
-     align-items: center;
-     margin-top: 5px;
+/*Producto Total Info*/
+.pc-product-main-data{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    border-bottom: solid white 1px;
+    width: 100%;
 }
 
-.pc-buy-top h2{    
-     font-family: Bebas Neue;
-     font-weight: 400;
-     font-size: 16px;
+/*Producto IMG*/
+.pc-product-img{
+    height: 70px;
+    margin-right: 10px;
 }
 
-.pc-buy-bot{
-     font-family: Bebas Neue;
-     padding: 2px 0px;
-     margin: 5px 15px;
-     background-color: #E5167F;
-     border: none;
-     border-radius: 5px;
-     color: white;
-     transition: all 450ms;
+/*Producto Datos*/
+.pc-product-main-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
 }
 
-@media (min-width: 1200px){
+/*Titulo del Producto*/
+.pc-product-main-info-title{
+    font-size: 14px;
+    font-weight: 300;
+    width: 100%;
+    text-align: left;
+}
 
-    .pc-product-description{
-         display: initial;
+/*Precio y Cantidad*/
+.pc-product-main-price-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/*Boton Cantidad*/
+#pc-cart-quantity-select{
+    font-size: 10px;
+    padding: 5px 10px 5px 0;
+    border: solid rgb(77, 77, 77) 1px;
+    border-radius: 3px;
+    background-color: transparent;
+}
+
+/*Precio Producto*/
+.pc-product-main-price-title{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/*Boton Eliminar*/
+.pc-main-delete-button{
+    border: none;
+    background-color: transparent;
+    color: rgb(63, 120, 224);
+    font-size: 15px;
+    margin: 10px;
+}
+
+/*Sección Total a Pagar*/
+.pc-main-buy-section-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+
+/*Titulo Precio Final*/
+.pc-main-buy-section-title{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/*Boton Comprar*/
+.pc-main-buy-section-button{
+    font-size: 15px;
+    padding: 5px 10px 5px;
+    width: 40%;
+    background-color: rgb(63, 120, 224);
+    border: none;
+    border-radius: 3px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px){
+   
+    /*Caja Producto*/
+    .pc-product-article{
+        max-width: 1200px;
     }
-    
-    .pc-article-data{
-         width: 70%;
-         padding: 10px 10px;
+   
+    /*Producto Datos*/
+    .pc-product-main-info{
+         flex-direction: row;
     }
 
-    .pc-product-title{
-         max-width: 100%;
+    /*Precio y Cantidad*/
+    .pc-product-main-price-content{
+        width: 40%;
+        justify-content: space-around;
     }
 
-    .pc-article-right-section{
-         width: 30%;
+    /*Titulo del Producto*/
+    .pc-product-main-info-title{
+        font-size: 20px;
     }
 
-    .pc-article-left-section{
-         width: 70%;
+    /*Precio Producto*/
+    .pc-product-main-price-title{
+         font-size: 25px;
     }
 
-    .pc-article-section{
-         max-width: 100%;
+    /*Boton Cantidad*/
+    #pc-cart-quantity-select{
+        font-size: 15px;
     }
 
-    .pc-product-img{
-         max-width: 85px;
+    /*Titulo Precio Final*/
+    .pc-main-buy-section-title{
+        font-size: 25px;
     }
 
-    .pc-main-price{
-         font-size: 20px;
+    /*Boton Comprar*/
+    .pc-main-buy-section-button{
+        font-size: 20px;
     }
-
-    .pc-price-container h3{
-         font-size: 8px;
-    }
-
-    #pc-quantity-button{
-         width: 40px;
-         height: 25px;
-    }
-
-    .pc-buy-article{
-         justify-content: flex-end;
-    }
-
-    .pc-buy-top{
-         justify-content: space-between;
-         margin: 10px 15px;
-    }
-
-    .pc-buy-top h2{
-         font-size: 20px;  
-    }
-
-    .pc-buy-bot:hover{
-         background-color: #eba91b;
-    }
-
-    #pc-trash-button:hover{
-         background-color: #eba91b;
-    }
+}
+.pc-main-buy-section-button:hover{
+    background-color: rgb(184, 75, 108);
+    transition: all 0.2s;
 }

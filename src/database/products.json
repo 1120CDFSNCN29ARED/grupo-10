@@ -1,0 +1,26 @@
+[
+ {
+  "productname": "Caja Amarilla",
+  "category": "all",
+  "prize": "",
+  "product_image": "Product-Image1.jpg",
+  "description": "",
+  "id": "3"
+ },
+ {
+  "productname": "Caja de Agradecimiento",
+  "category": "all",
+  "prize": "2020",
+  "product_image": "Product-Image1.jpg",
+  "description": "Grax pro sapeeeeeeeeeeeeeeeeeeee!",
+  "id": "6"
+ },
+ {
+  "productname": "Impresora philipps 2000",
+  "category": "office-products",
+  "prize": "50",
+  "product_image": "Product-Image1.jpg",
+  "description": "impresora para imprimir",
+  "id": "8"
+ }
+]

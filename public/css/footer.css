@@ -1,92 +1,89 @@
+/*Seccion Footer*/
 #page-footer{
      background-color: white;
      font-family: 'Bebas Neue';
+     position: relative;
+     bottom: 0;
+     width: 100%;
+     margin-top: auto;
 }
 
 .footer{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    padding: 20px 0px ;
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: space-around;
+     padding: 20px 0px;
+     
 }
 
-.footer-list{
-      list-style-type: none;
+/*Footer Logo*/
+.footer-img{
+     width: 30%;
+     text-align: center;
 }
 
+/*Logo IMG*/
+.logo-footer{
+     width: 45px;
+}
+
+/*Footer Data*/
 .footer-hiper{
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 40%;
-      font-size: 10px;
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     width: 40%;
+     font-size: 10px;
 
 }
 
+/*Footer Data Title*/
+.footer-title{
+     font-weight: 400;
+}
+
+/*Footer Social Media*/
 .footer-icons{
-    width: 30%;
-    text-align: center;
+     width: 30%;
+     text-align: center;
 }
 
-.footer-items{
-    display: flex;
-    justify-content: center;
-    font-family: Quicksand;
-}
-
+/*Social Media Icons*/
 .fo-list-icon{
      font-size: 15px;
      padding: 3px 0px;
-     transition: all 450ms;
 }
 
-.logo-footer{
-     width: 45px;
-     transition: all 450ms;
+/*Lista Elementos Footer*/
+.footer-list{
+     list-style-type: none;
 }
 
-.footer-img{
-    width: 30%;
-    text-align: center;
+/*Cada Elemento de la Lista*/
+.footer-items{
+     display: flex;
+     justify-content: center;
+     font-family: Quicksand;
 }
 
-.footer-title{
-    font-weight: 400;
-     transition: all 450ms;
-}
-
+/*Tablet View*/
 @media (min-width: 768px){
-   
+
+    /*Logo IMG*/
     .logo-footer{
-      width: 80px;
+         width: 80px;
     }
 
+    /*Social Media Icons*/
     .fo-list-icon{
-     font-size: 25px;
+         font-size: 25px;
     }
 
+    /*Footer Data*/
     .footer-hiper{
-     font-size: 16px;
-    }
-}
-
-@media (min-width: 1200px){
-     
-    .footer-title:hover{
-         color: #E5167F;
-          
-    } 
-
-    .fo-list-icon:hover{
-         color: #E5167F;
-          
-    } 
-
-    .logo-footer:hover{
-         width: 55px;
-         transform: rotate(360deg);
+         font-size: 16px;
     }
 }

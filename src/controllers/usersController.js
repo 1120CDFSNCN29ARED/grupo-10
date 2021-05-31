@@ -1,37 +1,55 @@
-const fs = require('fs');
+const jsonTable = require('../models/jsonTable')
+const jsonAtajos = jsonTable('users');
+const bcrypt = require('bcrypt');
+
+
 const usersController = {
-    'profile': (req, res) => {
-        res.render('../views/users/profile');
-    },
-    'loginIndex': (req,res) => {
-        res.render('../views/users/register-login');
-    },
     'register': (req, res) => {
-        res.render('../views/users/register-login');
+        res.render('../views/users/signIn');
     },
-    'registerUser': (req, res) => {    
+    'login': (req, res) => {
+        res.render('../views/users/logIn');
+    },
+    'profile': (req, res) => {
+        let user = jsonAtajos.find(req.params.id);
+
+        res.render('../views/users/profile', {user: user});
+    },
+    'createUser': (req, res) => {
         let user = {
             name: req.body.name,
             email: req.body.email,
             userName: req.body.userName,
-            birthDate: req.body.birthDate,
-            adress: req.body.adress,
-            password: req.body.password
-        };
-        let userJSON = JSON.stringify(user);
-        fs.appendFileSync('usersData', userJSON);
-        res.redirect('/');
+            avatar: req.body.avatar,
+            password: bcrypt.hashSync(req.body.password, 10)
+        }
+        jsonAtajos.create(user);
+
+        res.redirect('/users/list');
+    },
+    'list': (req, res) => {
+        let users = jsonAtajos.readFile('users');
+
+        res.render('../views/users/usersList', {users: users})
+    },
+    'delete': (req, res) => {
+        let IdToDelete =   req.body.id; 
+        jsonAtajos.delete(IdToDelete);
+
+        res.redirect('/users/list');
 
     },
-    'login': (req, res) => { 
+    'edit': (req, res) => {
+        let usuarioAEditar = jsonAtajos.find(req.params.id);
 
-        let user = {
-            userName: req.body.userName,
-            password: req.body.password
-        };
-        res.send(user);
+        res.render('../views/users/userEdit', {usuarioAEditar: usuarioAEditar});
+    },
+    'editUser': (req, res) => {
+        let userId = req.body;
+        let EditedUser = jsonAtajos.update(userId);
+
+        res.redirect('/users/list');
     }
-
 }
 
 module.exports = usersController;

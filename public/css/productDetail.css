@@ -1,184 +1,176 @@
- /*Tamaños y detalles*/
-
- .pd-main-article{
-    background-color: white;
-    border-radius: 5px;
-    margin: 10px 15px;
-    padding: 10px;
-    max-width: 450px;
+#pd-body{
+    font-family: 'Playfair Display', serif;
 }
 
-.pd-main-product-img{
-    width: 100%;
-    max-width: 400px;
-}
-
-.pd-product-detail{
-    width: 100%;
-    height: 50%;
-    padding: 10px;
-}
-
-.pd-price-share h2{
-    font-weight: 400;
-}
-
-.pd-cart-button{
-    width: 100%;
-    border-radius: 5px;
-    border: none;
-    background-color:  #E5167F;
-    color: white;
-    padding: 5px;
-    font-family: Bebas Neue;
-    font-size: 18px;
-    transition: all 450ms;
-}
-
-.pd-product-bot h2{
-    font-size: 15px;
-    font-weight: 400;
-    text-align: center;
-}
-
-.pd-product-name-top{
-    font-family: Bebas Neue;
-    font-weight: 400;
-    text-align: center;
-    border-top: solid 2px;
-    border-bottom: solid 2px;
-    margin: 10px 15px 0;
-    
-}
-
-.pd-product-name-bot{
-    display: none;
-    font-family: Bebas Neue;
-    font-weight: 400;
-    text-align: center;
-    border-top: solid 2px;
-    border-bottom: solid 2px;
-    margin: 10px 15px 0;
-    
-}
-
-.pd-share-button{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: none;
-    color: white;
-    background-color:  #E5167F;
-    transition: all 450ms;
-}
-
-.pd-fee-button{
-     border: none;
-     background-color: white;
-     margin-left: 5px;
-     border-radius: 5px;
-}
-
-/*Article Section*/
-
-.pd-main-section{
+/*Pagina Detalle de Producto*/
+.pd-main{
     display: flex;
     justify-content: center;
 }
 
-.pd-top-section{
+/*Sección Producto*/
+.pd-main-article{
     display: flex;
-    justify-content: center;
-}
-
-.pd-bot-section{
-    display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
+    margin: 25px 20px;
+    padding: 15px 10px;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0px 0px 10px rgb(200, 200, 200);
+    max-width: 550px;
     align-items: center;
-    justify-content: space-between;
-    margin: 0 15px;
 }
 
-.pd-product-price{
-    width: 100%;
-    max-width: 500px;
-    background-color: rgb(240, 240, 240);
-    border-radius: 5px;
-    padding: 10px;
+/*Producto IMG*/
+.pd-product-image{
+    width: 300px;
+}
+
+/*Product Info*/
+.pd-article-data{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    font-family: Bebas Neue;
+    justify-content: left;
+    padding: 10px 0px;
 }
 
-.pd-price-share{
+/*Titulo Producto*/
+.pd-article-title{
+    font-weight: 400;
+    font-size: 30px;
+}
+
+/*Precio Producto*/
+.pd-article-price{
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/*Cantidad*/
+.pd-article-quantity{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-}
-
-.pd-price-fee{
-    display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0 0;
 }
 
-@media (min-width: 768px){
-    
-    .pd-product-name-top{
-        display: none;
-    }
-   
-    .pd-product-name-bot{
-        display: inline;
-        margin: 0;
-        border: none;
-    }
+/*Titulo Cantidad*/
+.pd-article-quantity-title{
+    font-weight: 400;
+    font-size: 25px;
+}
 
-    .pd-main-article{
-        display: flex;
-        flex-direction: row;
-        max-width: 80%;
-        justify-content: space-around;
-    }
+/*Boton Cantidad*/
+#pd-quantity-button{
+    font-size: 20px;
+    width: 55px;
+    background-color: transparent;
+    border: solid 1px;
+}
 
-    .pd-bot-section{
-        width: 60%;
-        padding-left: 15px;
-        margin: 0;
-        flex-wrap: wrap;
-    }
+/*Boton Agregar al Carrito*/
+.pd-article-buy-button{
+    width: 100%;
+    margin: 20px 0px;
+    font-size: 20px;
+    font-weight: 400;
+    height: 50px;
+    background-color: rgb(63, 120, 224);
+    border: none;
+    color: white;
+}
 
-    .pd-product-price{
-        width: 100%;
-    }
+/*Titulo Descripcion*/
+.pd-article-description-title{
+    font-size: 20px;
+    font-weight: 400;
+}
 
-    .pd-product-detail{
-        width: 100%;
-        max-width: 500px;
-    }
-
-    .pd-top-section{
-        width: 40%;
-    }
-
-    .pd-product-detail{
-        height: 40%;
-    }
-    
-
+/*Producto Descripcion*/
+.pd-article-description-text{
+    font-size: 15px;
+    font-weight: 400;
 }
 
 @media (min-width: 1200px){
 
-    .pd-cart-button:hover{
-        background-color: #eba91b;
-
+    /*Sección Producto*/
+    .pd-main-article{
+        flex-direction: row;
+        max-width: 1500px;
+        margin-bottom: 120px;
+        margin-top: 50px;
     }
 
-    .pd-share-button:hover{
-        background-color: #eba91b;
+    /*Producto IMG*/
+    .pd-product-image{
+        height: 550px;
+        width: auto;
+        margin-right: 10px;
+    }
+
+    /*Product Info*/
+    .pd-article-data{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        padding: 0px 10px;    
+    }
+
+    /*Titulo Producto y Cantidad*/
+    .pd-article-data-price-section{
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-around;
+        height: 50%;
+    }
+
+    /*Titulo Producto*/
+    .pd-article-title{
+         font-size: 45px;
+    }
+
+    /*Precio Producto*/
+    .pd-article-price{
+         font-size: 35px;
+    }
+
+    /*Titulo Cantidad*/
+    .pd-article-quantity-title{
+          font-size: 25px;
+    }
+
+    /*Boton Cantidad*/
+    #pd-quantity-button{
+        font-size: 20px;
+        width: 65px;
+    }
+
+    /*Boton Agregar al Carrito*/
+    .pd-article-buy-button{
+        width: 100%;
+        max-width: 800px;
+        margin: 20px 0px;
+        font-size: 25px;
+        height: 50px;
+        order: 2;      
+    }
+
+    /*Descripción*/
+    .pd-article-description{
+        padding-bottom: 20px;
+    }
+
+    /*Titulo Descripcion*/
+    .pd-article-description-title{
+        font-size: 35px;
+    }
+
+    /*Producto Descripcion*/
+    .pd-article-description-text{
+        font-size: 20px;
     }
 }
