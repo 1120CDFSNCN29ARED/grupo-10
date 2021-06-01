@@ -4,6 +4,10 @@
     display: flex;
     justify-content: center;
 }
+.text-error {
+    color: rgb(184, 0, 0);
+    margin-bottom: 2px;
+}
 
 .li-main-section{
     width: 100%;

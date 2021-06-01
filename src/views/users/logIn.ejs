@@ -11,15 +11,21 @@
      
         <section class="li-main-section">
      
-            <form action="#" method="GET" class="li-main-form">
+            <form action="/users/log-in" method="POST" class="li-main-form">
                 
                 <!--Titulo-->
                 <h1 class="li-main-title">Ingresá tus Datos</h1>
      
                 <!--Campos a Llenar-->
                 <div class="li-main-input-data">
-                    <input class="li-main-in-put" type="text" name="userName" placeholder=" Nombre de Usuario" >
-                    <input class="li-main-in-put" type="password" name="password" placeholder=" Contraseña"> 
+                    <input class="li-main-in-put" type="text" name="userName" placeholder=" Nombre de Usuario" value="<%= locals.oldData ? oldData.userName : null %>" >
+                    <% if (locals.errors && errors.userName) { %>
+                        <P class="text-error"><i class="fas fa-exclamation-circle"></i> <%= errors.userName.msg %></P>
+                    <% } %>
+                    <input class="li-main-in-put" type="password" name="password" placeholder=" Contraseña">
+                    <% if (locals.errors && errors.password) { %>
+                        <P class="text-error"><i class="fas fa-exclamation-circle"></i> <%= errors.password.msg %></P>
+                    <% } %> 
                 </div>
      
                 <!--Recordatorios-->
@@ -27,7 +33,7 @@
      
                     <!--Permanecer Conectado-->
                     <div class="li-main-remember-imput">
-                        <input type="checkbox" name="remember" >
+                        <input type="checkbox" name="remember_user" >
                         <label for="remember" class="li-main-remember-content">Permanecer conectado</label>
                     </div>
      

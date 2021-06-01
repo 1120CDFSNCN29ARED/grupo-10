@@ -34,6 +34,11 @@ let jsonAtajos = function(tableName) {
             let rows = this.readFile();
             return rows.find(row => row.id == id)
         },
+        findByField(field, text) {
+            let rows = this.readFile();
+            let rowFound = rows.find(oneRow => oneRow[field] === text);
+            return rowFound;
+        },
         create(row) {
             let rows = this.readFile();
             row.id = this.nextId();

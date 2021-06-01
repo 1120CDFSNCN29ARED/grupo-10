@@ -32,11 +32,27 @@
   "id": 4
  },
  {
-  "name": "vovov",
-  "email": "dadad@live.vom",
-  "userName": "JuanaLaPro2000",
-  "avatar": "avatar1.jpg",
-  "password": "123",
-  "id": "5"
+  "name": "Camila Belén Medina",
+  "email": "camy4020@gmail.com",
+  "userName": "camy4020@gmail.com",
+  "password": "$2a$10$9GNNeSfuXgwfz5cl9fpFF.n6JQdilnwJiOLqH/0SaLGgk.4lrmREa",
+  "avatar": "1622501672727_img.jpg",
+  "id": 6
+ },
+ {
+  "name": "Camila Belén Medina",
+  "email": "cay4020@gmail.com",
+  "userName": "dada",
+  "password": "$2a$10$NlN39kun4flnv2QnR8kZDurX4LBGQBJ5VXLhm.NF7ib79ExCphlG6",
+  "avatar": "1622505147234_img.jpg",
+  "id": 7
+ },
+ {
+  "name": "Camila Belén Medina",
+  "email": "camy4020@gmail.co",
+  "userName": "camy4020",
+  "password": "$2a$10$BHZ7u5maAmZQUzg6.nsaZu/W/kvZkiKTM.k8dfLRyVQPIijxEpK7e",
+  "avatar": "1622506389414_img.jpg",
+  "id": 8
  }
 ]

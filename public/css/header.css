@@ -16,6 +16,51 @@
 .header-button{
      border: none;
      background-color: transparent;
+     border: solid red;
+     display: none;
+}
+.header-avatar-box{
+     display: inline-block;
+     position: relative;
+     width: 70px;
+     height: 70px;
+     overflow: hidden;
+     border-radius: 50%;
+     top: 0;
+     margin-bottom: 4px;
+}
+.header-li-user{
+     display: flex;
+     flex-flow: column;
+     border: solid green;
+     align-items: center;
+}
+.header-li-user img{
+     width: auto;
+     height: 100%;
+     margin-left: -20px;
+}
+.header-dropdown-menu{
+     border: solid red;
+     background-color: rgba(221, 221, 221, 0.295);
+     border-radius: 10px;
+     display: flex;
+     flex-flow: column;
+     list-style: none;
+     text-align: center;
+     bottom: 0;
+     display: none;
+}
+.header-li-user:hover .header-dropdown-menu{
+     display:flex;
+}
+.dropdown-item{
+     color: white;
+     text-decoration: none;
+}
+.dropdown-divider{
+     width: 80%;
+     margin: 2px auto;
 }
 
 /*Iconos Botones*/
@@ -61,6 +106,13 @@
     .header-icons{
          font-size: 3vw;
     }
+    .header-li-user{
+          width: 75px;
+          height: 75px;
+     }
+     .header-li-user img{
+          margin-left: -20px;
+     }
 }
 
 /*Laptop View*/
@@ -121,6 +173,13 @@
      /*Icono Carrito*/
      .cart-icon{
          display: flex;
+     }
+     .header-li-user{
+          width: 80px;
+          height: 80px;
+     }
+     .header-li-user img{
+          margin-left: -20px;
      }
           
 }

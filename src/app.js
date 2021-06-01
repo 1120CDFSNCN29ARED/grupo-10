@@ -3,7 +3,10 @@ const app = express();
 const path = require('path');
 const fs = require('fs');
 const methodOverride = require('method-override');
+const session = require('express-session');
+const cookies = require('cookie-parser')
 
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 const indexRouter = require('./routes/indexRoutes');
 const usersRouter = require('./routes/usersRoutes');
@@ -22,6 +25,12 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 app.use(methodOverride('_method'));
+
+app.use(session({
+    secret:'secret',
+    resave: false,
+    saveUninitialized: false,
+}));
 
 app.use('/', indexRouter);
 app.use('/product', productsRouter);
