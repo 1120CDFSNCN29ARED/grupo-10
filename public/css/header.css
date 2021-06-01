@@ -16,8 +16,6 @@
 .header-button{
      border: none;
      background-color: transparent;
-     border: solid red;
-     display: none;
 }
 .header-avatar-box{
      display: inline-block;
@@ -32,7 +30,6 @@
 .header-li-user{
      display: flex;
      flex-flow: column;
-     border: solid green;
      align-items: center;
 }
 .header-li-user img{
@@ -41,7 +38,6 @@
      margin-left: -20px;
 }
 .header-dropdown-menu{
-     border: solid red;
      background-color: rgba(221, 221, 221, 0.295);
      border-radius: 10px;
      display: flex;

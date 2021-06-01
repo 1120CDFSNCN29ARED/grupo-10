@@ -9,17 +9,22 @@
         <a href="/" class="header-logo"> <img src="/img/logos/DM-Logo4.png" alt="DM-Logo" id="dm-logo"> </a>
 
         <div id="header-button-user">
-            <li class="header-li-user">
-                <a class="header-avatar-box" href="#" role="button">
-                    <img src="/img/avatars/avatar1.jpg">
-                </a>
-                <ul class="header-dropdown-menu">
-                    <a class="dropdown-item" href="/users/profile">My profile</a>
-                    <li><hr class="dropdown-divider"></li>
-                    <a class="dropdown-item" href="/users/logout">Logout</a>
-                </ul>
-            </li>
-            <a href="/users/sign-in"><button class="header-button"> <i class="fas fa-user header-icons"></i> </button></a>
+            
+            <% if (locals.isLogged) { %>
+                <li class="header-li-user">
+                    <a class="header-avatar-box" href="#" role="button">
+                        <img src="/img/avatars/<%= locals.userLogged.avatar%>">
+                    </a>
+                    <ul class="header-dropdown-menu">
+                        <a class="dropdown-item" href="/users/profile">My profile</a>
+                        <li><hr class="dropdown-divider"></li>
+                        <a class="dropdown-item" href="/users/logout">Logout</a>
+                    </ul>
+                </li>
+            <% } else { %>
+                <a href="/users/sign-in"><button class="header-button"> <i class="fas fa-user header-icons"></i> </button></a>
+            <% } %>
+      
         </div>
 
         <!--Header Tablet/Ipad-->
@@ -36,13 +41,26 @@
         <!--Header Laptop-->
         <nav class="header-laptop-buttons">
             <ul class="header-list">
-                <li> <a href="/product/cart"> <button class="header-laptop-items cart-button"> <i
-                                class="fas fa-shopping-cart cart-icon"></i> </button> </a> </li>
-                <li> <a href="/users/log-in"> <button class="header-laptop-items"> Log In </button> </a> </li>
-                <li> <a href="/users/sign-in"> <button class="header-laptop-items"> Sign In </button> </a> </li>
+                <% if (locals.isLogged) { %>
+                    <li class="header-li-user">
+                        <a class="header-avatar-box" href="#" role="button">
+                            <img src="/img/avatars/<%= locals.userLogged.avatar%>">
+                        </a>
+                        <ul class="header-dropdown-menu">
+                            <a class="dropdown-item" href="/users/profile">My profile</a>
+                            <li><hr class="dropdown-divider"></li>
+                            <a class="dropdown-item" href="/users/logout">Logout</a>
+                        </ul>
+                    </li>
+                <% } else { %>
+                    <li> <a href="/product/cart"> <button class="header-laptop-items cart-button"> <i
+                        class="fas fa-shopping-cart cart-icon"></i> </button> </a> </li>
+                    <li> <a href="/users/log-in"> <button class="header-laptop-items"> Log In </button> </a> </li>
+                    <li> <a href="/users/sign-in"> <button class="header-laptop-items"> Sign In </button> </a> </li>
+                <% } %>
+                
             </ul>
         </nav>
 
     </section>
 </header>
-

@@ -3,24 +3,40 @@
   "productname": "Caja Amarilla",
   "category": "all",
   "prize": "",
-  "product_image": "Product-Image1.jpg",
+  "productImage": "Product-Image1.jpg",
   "description": "",
+  "id": "1"
+ },
+ {
+  "productname": "Caja de Naranjas",
+  "category": "all",
+  "prize": "475",
+  "productImage": "Product-Image1.jpg",
+  "description": "jkdhjshda",
+  "id": "2"
+ },
+ {
+  "productname": "Caja de pomelos",
+  "category": "all",
+  "prize": "5",
+  "productImage": "Product-Image1.jpg",
+  "description": "jkdhjshda",
   "id": "3"
  },
  {
-  "productname": "Caja de Agradecimiento",
+  "productname": "Caja de manzanas",
   "category": "all",
-  "prize": "2020",
-  "product_image": "Product-Image1.jpg",
-  "description": "Grax pro sapeeeeeeeeeeeeeeeeeeee!",
-  "id": "6"
+  "prize": "45",
+  "productImage": "Product-Image1.jpg",
+  "description": "jkdhjshda",
+  "id": "4"
  },
  {
-  "productname": "Impresora philipps 2000",
-  "category": "office-products",
-  "prize": "50",
-  "product_image": "Product-Image1.jpg",
-  "description": "impresora para imprimir",
-  "id": "8"
+  "productname": "Lapiceras",
+  "category": "librery",
+  "prize": "5",
+  "productImage": "lapiceras.jpg",
+  "description": "lapiceras",
+  "id": 5
  }
 ]

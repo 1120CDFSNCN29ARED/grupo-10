@@ -23,7 +23,8 @@ const productsController = {
         res.render('../views/products/productEdit', {productoAEditar: productoAEditar});
     },
     'createProduct': (req, res) => {
-        let product= req.body;
+        let product = req.body;
+
         productId = jsonAtajos.create(product);
 
         res.redirect('/product/list');
