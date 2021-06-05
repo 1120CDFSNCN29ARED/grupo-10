@@ -38,5 +38,13 @@ module.exports = function (sequelize, dataTypes) {
 
     const Location = sequelize.define(alias, cols, config);
 
+    Location.associate = function (models) {
+
+        Location.hasMany(models.User, {
+            as: 'users',
+            foreignKey: 'location_id'
+        });
+    };
+
     return Location;
 }

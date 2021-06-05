@@ -1,3 +1,5 @@
+const Cart = require("./Cart");
+
 module.exports = function (sequelize, dataTypes) {
 
     const alias = 'User';
@@ -47,6 +49,24 @@ module.exports = function (sequelize, dataTypes) {
     }
 
     const User = sequelize.define(alias, cols, config);
+
+    User.associate = function(models) {
+
+        User.belongsTo(models.User_type, {
+            as: 'user_type',
+            foreignKey: 'user_type_id'
+        });
+
+        User.belongsTo(models.Location, {
+            as: 'location',
+            foreignKey: 'location_id'
+        });
+
+        User.hasMany(models.Cart, {
+            as: 'cart',
+            foreignKey: 'user_id'
+        });
+    }
 
     return User;
 }

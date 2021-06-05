@@ -20,5 +20,13 @@ module.exports = function (sequelize, dataTypes){
 
     const User_type = sequelize.define(alias, cols, config); 
 
+    User_type.associate = function (models) {
+
+        User_type.hasMany(models.User, {
+            as: 'users',
+            foreignKey: 'user_type_id'
+        });
+    };
+
     return User_type;
 }
