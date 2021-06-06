@@ -21,11 +21,16 @@
                 <div class="pcreate-input-box">
                     <label class="la-bel" for="category">Categoría:</label>
                     <select class="in-put" id="category" name="category" placeholder="categorias">
-                        <option value="all">Todos</option>
-                        <option value="paper">Resmas</option>
-                        <option value="librery">Libreria</option>
-                        <option value="office-products">Equipamiento para la Oficina</option>
-                        <option value="merch">Merchandising</option>
+                        
+                        <% for (let i = 0; i < category.length; i++) { %>
+
+                            <option value="<%= category[i].id  %>">
+                                <%= category[i].name %>
+                            </option>
+
+                        <% } %>
+                        
+                        
                       </select>
                 </div>
     

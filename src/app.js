@@ -32,7 +32,7 @@ app.use(session({
     saveUninitialized: false,
 }));
 app.use(cookies());
-app.use(userLoggedMiddleware);
+/*app.use(userLoggedMiddleware);*/
 
 
 

@@ -1,4 +1,4 @@
-const jsonTable = require('../models/jsonTable')
+/*const jsonTable = require('../models/jsonTable')
 const jsonAtajos = jsonTable('users');
 
 const userLoggedMiddleware = (req, res, next) => {
@@ -19,4 +19,4 @@ const userLoggedMiddleware = (req, res, next) => {
 	next();
 }
 
-module.exports = userLoggedMiddleware;
+module.exports = userLoggedMiddleware;*/

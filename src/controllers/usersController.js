@@ -1,5 +1,5 @@
-const jsonTable = require('../models/jsonTable')
-const jsonAtajos = jsonTable('users');
+/*const jsonTable = require('../models/jsonTable')
+const jsonAtajos = jsonTable('users');*/
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
@@ -25,7 +25,7 @@ const usersController = {
                 oldData: req.body
             });
         }
-        let userEmailInDb = jsonAtajos.findByField('email', req.body.email);
+        /*let userEmailInDb = jsonAtajos.findByField('email', req.body.email);
         let userNameInDb = jsonAtajos.findByField('userName', req.body.userName);
         
         
@@ -58,23 +58,20 @@ const usersController = {
             
         }
 
-        let userCreated = jsonAtajos.create(userToCreate);
+        let userCreated = jsonAtajos.create(userToCreate);*/
 
         res.redirect('/users/log-in');
     },
     'list': (req, res) => {
-        let users = jsonAtajos.readFile('users');
 
         res.render('../views/users/usersList', {users: users})
     },   
     'edit': (req, res) => {
-        let usuarioAEditar = req.session.userLogged;
+        /*let usuarioAEditar = req.session.userLogged;*/
 
         res.render('../views/users/userEdit', {usuarioAEditar: usuarioAEditar});
     },
     'editUser': (req, res) => {
-
-        jsonAtajos.update(req.session.userLogged);
 
         res.redirect('/users/list');
     },
@@ -91,9 +88,9 @@ const usersController = {
         */
 
 
-        let userToLogin = jsonAtajos.findByField('userName', req.body.userName);
+        /*let userToLogin = jsonAtajos.findByField('userName', req.body.userName);*/
         
-        if(userToLogin) {
+       /* if(userToLogin) {
 			let passwordValida = bcryptjs.compareSync(req.body.password, userToLogin.password);
 			if (passwordValida) {
 				delete userToLogin.password;
@@ -120,21 +117,20 @@ const usersController = {
 					msg: 'No se encuentra este usuario en nuestra base de datos'
 				}
 			}
-		});
+		});*/
     },
     'profile': (req, res) => {   
-        res.render('../views/users/profile', { user: req.session.userLogged });
+        res.render('../views/users/profile', { /*user: req.session.userLogged*/ });
     },
     'delete': (req, res) => {
-        let IdToDelete =  (req.session.userLogged.id); //req.body.id
-        jsonAtajos.delete(IdToDelete);
+        /*let IdToDelete =  (req.session.userLogged.id);*/ //req.body.id
 
         res.render('../views/users/list');
 
     },
     'logout': (req, res) => {
-        res.clearCookie('userUserName');
-        req.session.destroy();
+        /*res.clearCookie('userUserName');
+        req.session.destroy();*/
         res.redirect('/');
     }
 }

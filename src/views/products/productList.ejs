@@ -11,23 +11,23 @@
            
         <!--Seccion Productos-->
         <section class="pf-main-section">
-            <% const num= productos.length %>
+            <% const num= product.length %>
                 <% for (let i=0; i < num; i++) { %>
                     <article class="home-article">
 
-                        <img src="/img/Products-Images/<%= productos[i].productImage %>" alt="Product-Image" class="product-images">
+                        <img src="/img/Products-Images/<%= product[i].product_img %>" alt="Product-Image" class="product-images">
                     
-                        <h3 class="home-article-title"><%= productos[i].productname%></h3>
+                        <h3 class="home-article-title"><%= product[i].name%></h3>
                     
-                        <h4 class="home-article-price"><%= productos[i].prize%>USD</h4>
+                        <h4 class="home-article-price"><%= product[i].price%>USD</h4>
                     
                         <div class="home-article-button">
                     
                             <form action="/product/list?_method=DELETE" method="POST" class="home-article-form">
-                                <button type="submit" class="article-button-comprar" value="<%= productos[i].id%>" name="id">Borrar</button>
+                                <button type="submit" class="article-button-comprar" value="<%= product[i].id%>" name="id">Borrar</button>
                             </form>
                     
-                            <form action="/product/edit/<%= productos[i].id%>" method="GET" class="home-article-form">
+                            <form action="/product/edit/<%= product[i].id%>" method="GET" class="home-article-form">
                                 <button type="submit" class="article-button-ver">Editar</button>
                             </form>
                     
