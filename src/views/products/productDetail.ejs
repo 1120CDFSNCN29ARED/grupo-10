@@ -13,7 +13,7 @@
         <article class="pd-main-article">
           
             <!--Producto IMG-->
-            <img src="/img/Products-Images/<%= producto.product_image %>" alt="Product-1" class="pd-product-image">
+            <img src="/img/Products-Images/<%= product.product_img %>" alt="Product-1" class="pd-product-image">
           
             <!--Producto Info-->
             <div class="pd-article-data">
@@ -23,8 +23,9 @@
           
                     <!--Titulo y Precio-->
                     <div>
-                        <h1 class="pd-article-title"><%= producto.productname %></h1>
-                        <h2 class="pd-article-price"><%= producto.prize %> USD</h2>
+                        <h1 class="pd-article-title"><%= product.name %></h1>
+                        <h2 class="pd-article-price"><%= product.price %> USD</h2>
+                        <h2 class="pd-article-price"><%= product.category.name%></h2>
                     </div>
           
                     <!--Cantidad-->
@@ -49,8 +50,7 @@
                     <!--Titulo Descripción-->
                     <h1 class="pd-article-description-title">Descripcion</h1>
                     <!--Producto Descripción-->
-                    <h2 class="pd-article-description-text">· 8 – 1/2 x 11" Carta Tamaño Papel blanco brillante proporciona mejor contraste. Funciona bien en fotocopiadoras, impresoras de inyección de tinta o láser. Sin ácido para calidad de archivo papel divertido, funcional para su oficina. Poly-wrapped resmas proporcionar atractivo visual y protección resistencia. Costo el mismo como el papel normal.</h2>
-                </div>
+                    <h2 class="pd-article-description-text"> <%= product.description %> </h2>
             </div>
         </article>
     </main>

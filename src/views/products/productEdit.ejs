@@ -9,43 +9,50 @@
     <main class="pe-main">
         <section id="pe-section-form">        
     
-            <form id="pe-form" action="/product/edit/<%= productoAEditar.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <form id="pe-form" action="/product/edit/<%= product.id %>?_method=PUT" method="POST">
                 
-                <h1 id="pe-form-title">Editar producto <%= productoAEditar.productname %></h1>
+                <h1 id="pe-form-title">Editar producto <%= product.name %></h1>
 
                 <div class="pe-input-box">
                     <label class="la-bel" for="productname">Nombre del producto:</label>
-                    <input class="in-put" type="text" name="productname" placeholder="Nombre del producto" id="product-name">
+                    <input class="in-put" type="text" name="productname" placeholder="Nombre del producto" value='<%=product.name %>' id="product-name">
                 </div>
            
                 <div class="pe-input-box">
                     <label class="la-bel" for="category">Categoría:</label>
                     <select class="in-put" id="category" name="category" placeholder="categorias">
-                        <option>Categoría</option>
-                        <option value="all">Todos</option>
-                        <option value="paper">Resmas</option>
-                        <option value="librery">Libreria</option>
-                        <option value="office-products">Equipamiento para la Oficina</option>
-                        <option value="merch">Merchandising</option>
+                        
+                        <% for (let i=0; i < category.length; i++) { %>
+                            
+                          <% if (category[i].id == product.category_id) { %>
+                            <option value="<%= category[i].id  %>" selected>
+                                <%= category[i].name %>
+                            </option>
+                          <% } else { %>
+                            <option value="<%= category[i].id  %>">
+                                <%= category[i].name %>
+                            </option>
+                          <% } %> 
+                       <% } %>
                       </select>
                 </div>
     
                 <div class="pe-input-box">
                     <label class="la-bel" for="prize">Precio:</label>
-                    <input class="in-put" type="number" name="prize" placeholder="Precio" id="prize" >
+                    <input class="in-put" type="number" name="prize" placeholder="Precio" id="prize" value='<%=product.price %>'>
                 </div>
 
                 <div class="pe-input-box">
                     <label class="la-bel" for="productImage">Imagen del producto:</label>
-                    <input type="file" class="in-put" name="productImage" id="productImage"> 
+                    <input type="file" class="in-put" name="productImage" id="productImage" value='<%=product.product_img %>'> 
                 </div>
 
                 <div class="pe-input-box">
-                    <textarea class="in-put" name="description" id="description" cols="30" placeholder="Descripción del producto" rows="5"></textarea>
+                    <textarea class="in-put" name="description" id="description" cols="30" placeholder="Descripción del producto" rows="5"><%=product.description %></textarea>
                 </div>
 
                 <div class="pe-input-box">
-                    <button id="send-button" type="submit" value="<%= productoAEditar.id %>" name="id">CARGAR PRODUCTO</button>
+                    <button id="send-button" type="submit" name="id">CARGAR PRODUCTO</button>
                 </div>
 
             </form>
