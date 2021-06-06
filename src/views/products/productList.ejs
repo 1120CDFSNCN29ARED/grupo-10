@@ -23,7 +23,7 @@
                     
                         <div class="home-article-button">
                     
-                            <form action="/product/list?_method=DELETE" method="POST" class="home-article-form">
+                            <form action="/product/delete/<%= product[i].id%>" method="POST" class="home-article-form">
                                 <button type="submit" class="article-button-comprar" value="<%= product[i].id%>" name="id">Borrar</button>
                             </form>
                     

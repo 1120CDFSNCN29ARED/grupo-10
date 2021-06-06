@@ -17,8 +17,7 @@ router.get('/:id', productsController.detail);
 router.get('/edit/:id', productsController.edit);
 router.put('/edit/:id', productsController.updateEdit);
 
-router.get('/list', productsController.list);
-router.delete('/list', productsController.delete);
+router.post('/delete/:id', productsController.delete);
 
 
 module.exports = router;

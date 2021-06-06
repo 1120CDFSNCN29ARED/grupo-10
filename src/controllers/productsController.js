@@ -73,8 +73,12 @@ const productsController = {
         res.redirect('/product/' + req.params.id);
     },
     'delete': (req, res) => {
-
-        res.redirect('/product/list');
+        db.Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        res.redirect('/product');
     }
 }
 
