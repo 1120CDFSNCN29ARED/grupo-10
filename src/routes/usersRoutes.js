@@ -21,7 +21,7 @@ router.get('/list', usersController.list);
 router.get('/edit/:id', usersController.edit);
 router.put('/edit/:id', usersController.updateUser);
 
-router.delete('/profile/', authMiddleware,  usersController.delete);
+router.post('/delete/:id', authMiddleware,  usersController.delete);
 
 
 module.exports = router;

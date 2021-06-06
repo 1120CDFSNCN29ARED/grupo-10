@@ -107,7 +107,7 @@ const usersController = {
                 id: req.params.id
             }
         });
-        
+
         res.redirect('/users/list');
     },
     'loginProcess': (req, res) => {
@@ -155,12 +155,21 @@ const usersController = {
 		});*/
     },
     'profile': (req, res) => {   
-        res.render('../views/users/profile', { /*user: req.session.userLogged*/ });
+        db.User.findByPk(req.params.id)
+            .then(() => {
+                res.render('../views/users/profile', { /*user: req.session.userLogged*/ });
+            })
     },
     'delete': (req, res) => {
         /*let IdToDelete =  (req.session.userLogged.id);*/ //req.body.id
 
-        res.render('../views/users/list');
+        db.User.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+
+        res.render('/users/list');
 
     },
     'logout': (req, res) => {
