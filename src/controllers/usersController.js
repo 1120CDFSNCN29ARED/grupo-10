@@ -87,11 +87,27 @@ const usersController = {
     },   
     'edit': (req, res) => {
         /*let usuarioAEditar = req.session.userLogged;*/
-
-        res.render('../views/users/userEdit', {usuarioAEditar: usuarioAEditar});
+        db.User.findByPk(req.params.id)
+            .then( (users) => {
+                res.render('../views/users/userEdit', { users: users });
+            } )
     },
-    'editUser': (req, res) => {
-
+    'updateUser': (req, res) => {
+        db.User.update({
+            first_name: req.body.name,
+            last_name: req.body.apellido,
+            email: req.body.email,
+            nickname: req.body.userName,
+            profile_img: req.body.avatar,
+            password: req.body.password,
+            user_type_id: null,
+            location_id: null
+        },{
+            where: {
+                id: req.params.id
+            }
+        });
+        
         res.redirect('/users/list');
     },
     'loginProcess': (req, res) => {
