@@ -12,12 +12,12 @@
             <a class="usersl-main-article">
                 <div class="usersl-divs">
                     <div id="usersl-avatar-box">
-                        <img src="/img/avatars/<%= users[i].avatar %>" alt="avatar" class="avatar">
+                        <img src="/img/avatars/<%= users[i].profile_img %>" alt="avatar" class="avatar">
                     </div>  
                 </div>
                 <div class="usersl-divs">
-                    <h1><%= users[i].userName %></h1>
-                    <h2><%= users[i].name %></h2>
+                    <h1><%= users[i].nickname %></h1>
+                    <h2><%= users[i].first_name + ' ' + users[i].last_name %></h2>
                     <p><%= users[i].email %></p>
                     <h3>id: <%= users[i].id %></h3>
                 </div>                           

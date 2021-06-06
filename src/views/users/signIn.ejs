@@ -11,17 +11,21 @@
      
         <section class="li-main-section">
      
-            <form action="/users/sign-in" method="POST" class="li-main-form" enctype="multipart/form-data">
+            <form action="/users/sign-in" method="POST" class="li-main-form">
      
                 <!--Titulo-->
                 <h1 class="li-main-title">Registrate</h1>
      
                 <!--Campos a Llenar-->
                 <div class="li-main-input-data">
-                    <input class="li-main-in-put" type="text" name="name" placeholder="Nombre y apellido" value="<%= locals.oldData ? oldData.name : null %>" >
+                    <input class="li-main-in-put" type="text" name="name" placeholder="Nombre" value="<%= locals.oldData ? oldData.name : null %>" >
                     <% if (locals.errors && errors.name) { %>
                         <p class="text-error"><i class="fas fa-exclamation-circle"></i> <%= errors.name.msg %></p>
-                    <% } %>   
+                    <% } %>  
+                    <input class="li-main-in-put" type="text" name="apellido" placeholder="Apellido" value="<%= locals.oldData ? oldData.name : null %>">
+                    <% if (locals.errors && errors.name) { %>
+                        <p class="text-error"><i class="fas fa-exclamation-circle"></i><%= errors.name.msg %></p>
+                    <% } %> 
                     <input class="li-main-in-put" type="email" name="email" placeholder="E-mail" value="<%= locals.oldData ? oldData.email : null %>" >
                     <% if (locals.errors && errors.email) { %>
                         <P class="text-error"><i class="fas fa-exclamation-circle"></i> <%= errors.email.msg %></P>

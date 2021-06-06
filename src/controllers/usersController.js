@@ -2,53 +2,60 @@
 const jsonAtajos = jsonTable('users');*/
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
+let db = require('../database/models');
 
 
 const usersController = {
     'register': (req, res) => {
         res.render('../views/users/signIn');
     },
-    'login': (req, res) => {
-        res.render('../views/users/logIn');
-    },
-    'logout': (req, res) => {
-        res.clearCookie('userEmail');
-		req.session.destroy();
-		return res.redirect('/');
-    },
-    'createUser': (req, res) => {
-        const resultValidation = validationResult(req);
 
-        if (resultValidation.errors.length > 0){
+    'createUser': (req, res) => {
+        db.User.create({
+            first_name: req.body.name,
+            last_name: req.body.apellido,
+            email: req.body.email,
+            nickname: req.body.userName,
+            profile_img: req.body.avatar,
+            password: req.body.password,
+            user_type_id: null,
+            location_id: null
+        })
+
+        res.redirect('/users/list');
+        
+        /*const resultValidation = validationResult(req);
+
+        if (resultValidation.errors.length > 0) {
             return res.render('../views/users/signIn', {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             });
-        }
+        }*/
         /*let userEmailInDb = jsonAtajos.findByField('email', req.body.email);
         let userNameInDb = jsonAtajos.findByField('userName', req.body.userName);
         
         
         if (userNameInDb){
             return res.render('../views/users/signIn', {
-				errors: {
-					userName: {
-						msg: 'Este usuario ya existe'
-					}
-				},
-				oldData: req.body
-			});
+                errors: {
+                    userName: {
+                        msg: 'Este usuario ya existe'
+                    }
+                },
+                oldData: req.body
+            });
         }
 
         if (userEmailInDb){
             return res.render('../views/users/signIn', {
-				errors: {
-					email: {
-						msg: 'Este email ya está registrado'
-					}
-				},
-				oldData: req.body
-			});
+                errors: {
+                    email: {
+                        msg: 'Este email ya está registrado'
+                    }
+                },
+                oldData: req.body
+            });
         }
 
         let userToCreate = {
@@ -60,11 +67,23 @@ const usersController = {
 
         let userCreated = jsonAtajos.create(userToCreate);*/
 
-        res.redirect('/users/log-in');
+        //res.redirect('/users/log-in');
     },
-    'list': (req, res) => {
 
-        res.render('../views/users/usersList', {users: users})
+    'login': (req, res) => {
+        res.render('../views/users/logIn');
+    },
+    'logout': (req, res) => {
+        res.clearCookie('userEmail');
+		req.session.destroy();
+		return res.redirect('/');
+    },
+    
+    'list': (req, res) => {
+        db.User.findAll()
+            .then((users) => {
+                res.render('../views/users/usersList', {users: users})
+            })
     },   
     'edit': (req, res) => {
         /*let usuarioAEditar = req.session.userLogged;*/
