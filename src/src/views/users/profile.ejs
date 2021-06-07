@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head') %>
+
+<body id="pd-body">
+    <%- include('../partials/header') %>
+
+  
+    <main class="profile-main">
+        <article class="profile-main-article">
+            <div class="profile-divs">
+                <div id="profile-avatar-box">
+                    <img src="/img/avatars/<%= user.avatar %>" alt="avatar" class="avatar">
+                </div>  
+            </div>
+            <div class="profile-divs">
+                <h1><%= user.userName %></h1>
+                <h2><%= user.name %></h2>
+                <p><%= user.email %></p>
+            </div>
+            <div class="profile-divs" id="profile-divs-forms">
+
+                <% if (locals.isLogged) { %>
+                    <form action="/users/profile/?_method=DELETE" method="POST" class="home-article-form">
+                        <button type="submit" class="article-button-comprar" value="<%= user.id%>" name="id">Eliminar</button>
+                    </form>
+            
+                    <form action="/users/edit/<%= user.id%>" method="GET" class="home-article-form">
+                        <button type="submit" class="article-button-ver">Editar</button>
+                    </form>
+                <% } %>
+                
+            </div>
+        </article>
+    </main>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>
+

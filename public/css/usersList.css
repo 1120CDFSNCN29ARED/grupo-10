@@ -20,6 +20,11 @@
 .usersl-divs{
     text-align: center;
 }
+.usersl-divs-buttons{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+}
 .usersl-divs h1 {
     overflow: hidden;
     font-family: 'American Typewriter';
