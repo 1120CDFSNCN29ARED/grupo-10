@@ -4,11 +4,11 @@ const jsonAtajos = jsonTable('users');
 const userLoggedMiddleware = (req, res, next) => {
 	res.locals.isLogged = false;
 
-	let userNameInCookie = req.cookies.userUserName;
-	let userFromCookie = jsonAtajos.findByField('userName', userNameInCookie);
+	let emaileInCookie = req.cookies.userEmail;
+	let emailCookie = jsonAtajos.findByField('email', emailInCookie);
 
-	if (userFromCookie) {
-		req.session.userLogged = userFromCookie;
+	if (emailCookie) {
+		req.session.userLogged = emailCookie;
 	}
 
 	if (req.session.userLogged) {

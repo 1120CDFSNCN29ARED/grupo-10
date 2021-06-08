@@ -6,7 +6,7 @@ module.exports = [
     body('email').notEmpty().withMessage('Tenes que escribir un correo electrónico').bail().isEmail().withMessage('Debes escribir un formato de correo válido'),
     body('password').notEmpty().withMessage('Tenes que escribir una contraseña'),
     body('userName').notEmpty().withMessage('Tenes que escribir un nombre de Usuario'),
-    body('avatar').custom((value, {req}) => {
+    /*body('avatar').custom((value, {req}) => {
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.png', '.gif'];
 
@@ -20,5 +20,5 @@ module.exports = [
         }
         return true
                     
-    })
+    })*/ 
 ]
