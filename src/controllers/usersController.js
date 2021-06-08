@@ -21,14 +21,14 @@ const usersController = {
     },
 
     'createUser': (req, res) => {
-        const resultValidation = validationResult(req);
+        /*const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
             return res.render('../views/users/signIn', {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             });
-        }
+        }*/
         db.User.create({
             first_name: req.body.name,
             last_name: req.body.apellido,

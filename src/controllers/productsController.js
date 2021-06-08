@@ -12,6 +12,12 @@ const productsController = {
                 res.render('../views/products/productList', { product: product });
             });
     },
+    
+    //Carrito
+    'cart': (req, res) => {
+        res.render('../views/products/productCart');
+    },
+
 
     //Detalle
     'detail': (req, res) => {
@@ -21,11 +27,6 @@ const productsController = {
             .then((product) => {
                 res.render('../views/products/productDetail', { product: product });
             });
-    },
-
-    //Carrito
-    'cart': (req, res) => {
-        res.render('../views/products/productCart');
     },
 
     //filtro
