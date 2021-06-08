@@ -14,6 +14,7 @@ const productsRouter = require('./routes/productsRoutes');
 
 
 
+
 app.set('views', path.resolve(__dirname, './views'));
 app.set('view engine', 'ejs');
 

@@ -6,16 +6,6 @@ let db = require('../database/models');
 
 
 const usersController = {
-   
-    //Listado
-    'list': (req, res) => {
-        db.User.findAll()
-            .then((users) => {
-                res.render('../views/users/usersList', { users: users })
-            })
-    },
-
-    //Registro
     'register': (req, res) => {
         res.render('../views/users/signIn');
     },
@@ -80,13 +70,27 @@ const usersController = {
         //res.redirect('/users/log-in');
     },
 
-    //Edicion
+    'login': (req, res) => {
+        res.render('../views/users/logIn');
+    },
+    'logout': (req, res) => {
+        res.clearCookie('userEmail');
+		req.session.destroy();
+		return res.redirect('/');
+    },
+    
+    'list': (req, res) => {
+        db.User.findAll()
+            .then((users) => {
+                res.render('../views/users/usersList', {users: users})
+            })
+    },   
     'edit': (req, res) => {
         /*let usuarioAEditar = req.session.userLogged;*/
         db.User.findByPk(req.params.id)
-            .then((users) => {
+            .then( (users) => {
                 res.render('../views/users/userEdit', { users: users });
-            })
+            } )
     },
     'updateUser': (req, res) => {
         db.User.update({
@@ -98,34 +102,14 @@ const usersController = {
             password: req.body.password,
             user_type_id: null,
             location_id: null
-        }, {
+        },{
             where: {
                 id: req.params.id
             }
         });
-
+        
         res.redirect('/users/list');
     },
-
-    //Eliminacion
-    'delete': (req, res) => {
-        /*let IdToDelete =  (req.session.userLogged.id);*/ //req.body.id
-
-        db.User.destroy({
-            where: {
-                id: req.params.id
-            }
-        })
-
-        res.redirect('/users/list');
-
-    },
-
-    //Inicio Sesion
-    'login': (req, res) => {
-        res.render('../views/users/logIn');
-    },
-
     'loginProcess': (req, res) => {
         /*
         const resultValidation = validationResult(req);
@@ -140,53 +124,50 @@ const usersController = {
 
 
         /*let userToLogin = jsonAtajos.findByField('userName', req.body.userName);*/
+        
+       /* if(userToLogin) {
+			let passwordValida = bcryptjs.compareSync(req.body.password, userToLogin.password);
+			if (passwordValida) {
+				delete userToLogin.password;
+				req.session.userLogged = userToLogin;
+                
+				if(req.body.remember_user) {
+					res.cookie('userUserName', req.body.userName, { maxAge: (1000 * 60) * 60 })//ms
+				}
+                
+				res.redirect('/users/profile');
+			} 
+			res.render('../views/users/logIn', {
+				errors: {
+					userName: {
+						msg: 'Las credenciales son inválidas'
+					}
+				}
+			});
+		}
 
-        /* if(userToLogin) {
-             let passwordValida = bcryptjs.compareSync(req.body.password, userToLogin.password);
-             if (passwordValida) {
-                 delete userToLogin.password;
-                 req.session.userLogged = userToLogin;
-                 
-                 if(req.body.remember_user) {
-                     res.cookie('userUserName', req.body.userName, { maxAge: (1000 * 60) * 60 })//ms
-                 }
-                 
-                 res.redirect('/users/profile');
-             } 
-             res.render('../views/users/logIn', {
-                 errors: {
-                     userName: {
-                         msg: 'Las credenciales son inválidas'
-                     }
-                 }
-             });
-         }
- 
-         return res.render('../views/users/logIn', {
-             errors: {
-                 userName: {
-                     msg: 'No se encuentra este usuario en nuestra base de datos'
-                 }
-             }
-         });*/
+		return res.render('../views/users/logIn', {
+			errors: {
+				userName: {
+					msg: 'No se encuentra este usuario en nuestra base de datos'
+				}
+			}
+		});*/
     },
-
-
-    'logout': (req, res) => {
-        res.clearCookie('userEmail');
-		req.session.destroy();
-		return res.redirect('/');
-    }, 
-    
-    //Perfil
     'profile': (req, res) => {   
-        db.User.findByPk(req.params.id)
-            .then(() => {
-                res.render('../views/users/profile', { /*user: req.session.userLogged*/ });
-            })
+        res.render('../views/users/profile', { /*user: req.session.userLogged*/ });
     },
-    
-    //LogOut
+    'delete': (req, res) => {
+        /*let IdToDelete =  (req.session.userLogged.id);*/ //req.body.id
+        db.User.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+
+        res.redirect('/users/list');
+
+    },
     'logout': (req, res) => {
         /*res.clearCookie('userUserName');
         req.session.destroy();*/

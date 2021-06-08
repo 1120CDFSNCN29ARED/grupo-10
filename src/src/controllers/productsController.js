@@ -3,37 +3,14 @@ const jsonAtajos = jsonTable('products');*/
 let db = require('../database/models');
 
 const productsController = {
-  
-
-    //Listado
-     'list': (req, res) => {
-        db.Product.findAll()
-            .then((product) => {
-                res.render('../views/products/productList', { product: product });
-            });
-    },
-
-    //Detalle
-    'detail': (req, res) => {
-        db.Product.findByPk(req.params.id, {
-            include: [{ association: 'category' }]
-        })
-            .then((product) => {
-                res.render('../views/products/productDetail', { product: product });
-            });
-    },
-
-    //Carrito
+    
     'cart': (req, res) => {
         res.render('../views/products/productCart');
     },
-
-    //filtro
     'filter': (req, res) => {
         res.render('../views/products/productFilter', {productos: productos})
     },
 
-    //Creacion
     'create': (req, res) => {
         db.Category.findAll()
             .then((category) => {
@@ -53,17 +30,33 @@ const productsController = {
         res.redirect('/product');
     },
 
-    //Edicion    
+    'list': (req, res) => {
+        db.Product.findAll()
+            .then( (product) => {
+                 res.render('../views/products/productList', {product: product});
+            });
+        
+    },
+
+    'detail': (req, res) => {
+        db.Product.findByPk(req.params.id, {
+            include: [{association: 'category'}]
+        })
+            .then((product) => {
+                res.render('../views/products/productDetail', {product: product});
+            });
+        
+    },
     'edit': (req, res) => {
         let productReq = db.Product.findByPk(req.params.id);
         let categoryReq = db.Category.findAll();
-
+        
         Promise.all([productReq, categoryReq])
             .then(([product, category]) => {
                 res.render('../views/products/productEdit', { product: product, category: category });
             })
     },
-
+   
     'updateEdit': (req, res) => {
         db.Product.update({
             name: req.body.productname,
@@ -79,8 +72,6 @@ const productsController = {
 
         res.redirect('/product/' + req.params.id);
     },
-
-    //Borrado    
     'delete': (req, res) => {
         db.Product.destroy({
             where: {
@@ -88,8 +79,7 @@ const productsController = {
             }
         })
         res.redirect('/product');
-    } 
+    }
 }
-
 
 module.exports = productsController;

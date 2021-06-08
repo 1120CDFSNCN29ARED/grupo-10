@@ -7,32 +7,21 @@ const validations = require('../middlewares/validateSignInMiddleware')
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
-//Listado de Usuarios
-router.get('/list', usersController.list);
-
-//Registro
-router.get('/sign-in', guestMiddleware, usersController.register);
+router.get('/sign-in', usersController.register);
 router.post('/sign-in', uploadFile.single('avatar'), validations, usersController.createUser);
 
-//Edicion
+router.get('/log-in', usersController.login);
+router.post('/log-in', validations, usersController.loginProcess);
+
+router.get('/profile/', usersController.profile);
+router.get('/logout/', usersController.logout);
+
+router.get('/list', usersController.list);
+
 router.get('/edit/:id', usersController.edit);
 router.put('/edit/:id', usersController.updateUser);
 
-//Eliminacion
-router.post('/delete/:id', usersController.delete);
-
-//Inicio Sesion
-router.get('/log-in', guestMiddleware, usersController.login);
-router.post('/log-in', validations, usersController.loginProcess);
-
-//Perfil
-router.get('/profile/', authMiddleware, usersController.profile);
-
-//Salir de la Sesion
-router.get('/logout/', usersController.logout);
-
-
-
+router.delete('/delete/:id', usersController.delete);
 
 
 module.exports = router;
