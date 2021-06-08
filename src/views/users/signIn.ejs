@@ -3,6 +3,7 @@
 
 <body>
     <%- include('../partials/header') %>
+    <script src="/js/register.js"> </script>
 
     <!--Pagina Sign In-->
     <main class="li-main-page">
@@ -16,27 +17,27 @@
      
                 <!--Campos a Llenar-->
                 <div class="li-main-input-data">
-                    <input class="li-main-in-put" type="text" name="name" placeholder="Nombre" value="<%= locals.oldData ? oldData.name : null %>" >
+                    <input class="li-main-in-put" type="text" name="name" id="firstNameInput" placeholder="Nombre" value="<%= locals.oldData ? oldData.name : null %>" >
                     <% if (locals.errors && errors.name) { %>
                         <p class="text-error"><i class="fas fa-exclamation-circle"></i> <%= errors.name.msg %></p>
                     <% } %>  
-                    <input class="li-main-in-put" type="text" name="apellido" placeholder="Apellido" value="<%= locals.oldData ? oldData.name : null %>">
+                    <input class="li-main-in-put" type="text" name="apellido" id="lastNameInput" placeholder="Apellido" value="<%= locals.oldData ? oldData.name : null %>">
                     <% if (locals.errors && errors.name) { %>
                         <p class="text-error"><i class="fas fa-exclamation-circle"></i><%= errors.name.msg %></p>
                     <% } %> 
-                    <input class="li-main-in-put" type="email" name="email" placeholder="E-mail" value="<%= locals.oldData ? oldData.email : null %>" >
+                    <input class="li-main-in-put" type="email" name="email" id="emailInput" placeholder="E-mail" value="<%= locals.oldData ? oldData.email : null %>" >
                     <% if (locals.errors && errors.email) { %>
                         <P class="text-error"><i class="fas fa-exclamation-circle"></i> <%= errors.email.msg %></P>
                     <% } %>
-                    <input class="li-main-in-put" type="text" name="userName" placeholder="Nombre de usuario" value="<%= locals.oldData ? oldData.userName : null %>" >
+                    <input class="li-main-in-put" type="text" name="userName" id="userNameInput" placeholder="Nombre de usuario" value="<%= locals.oldData ? oldData.userName : null %>" >
                     <% if (locals.errors && errors.userName) { %>
                         <p class="text-error"><i class="fas fa-exclamation-circle"></i> <%= errors.userName.msg %></p>
                     <% } %>             
-                    <input class="li-main-in-put" type="file"  name="avatar" >
+                    <input class="li-main-in-put" type="file"  name="avatar" id="avatarInput">
                     <% if (locals.errors && errors.avatar) { %>
                         <p class="text-error"><i class="fas fa-exclamation-circle"></i> <%= errors.avatar.msg %></p>
                     <% } %>
-                    <input class="li-main-in-put" type="password" name="password" placeholder="Contraseña" >
+                    <input class="li-main-in-put" type="password" name="password" id="passwordInput" placeholder="Contraseña" >
                     <% if (locals.errors && errors.password) { %>
                         <p class="text-error"><i class="fas fa-exclamation-circle"></i> <%= errors.password.msg %></p>
                     <% } %>
