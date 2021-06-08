@@ -1,39 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/productDetail.css">
+</head>
 
-<%- include('../partials/head') %>
-
-<body id="pd-body">
+<body id="body">
     <%- include('../partials/header') %>
 
     <!--Pagina Detalle Producto-->
-    <main class="pd-main">
+    <main class="main">
 
         <!--Sección Producto-->
-        <article class="pd-main-article">
+        <article class="main-article">
           
             <!--Producto IMG-->
-            <img src="/img/Products-Images/Resmas/<%= product.product_img %>" alt="Product-1" class="pd-product-image">
+            <img src="/img/Products-Images/Resmas/<%= product.product_img %>" alt="Product IMG" class="product-image">
           
             <!--Producto Info-->
-            <div class="pd-article-data">
+            <div class="article-data">
           
                 <!--Producto Titulo y Cantidad-->
-                <div class="pd-article-data-price-section">
+                <div class="article-data-price-section">
           
                     <!--Titulo y Precio-->
                     <div>
-                        <h1 class="pd-article-title"><%= product.name %></h1>
-                        <h2 class="pd-article-price"><%= product.price %> USD</h2>
-                        <h2 class="pd-article-price"><%= product.category.name%></h2>
+                        <h1 class="article-title"><%= product.name %></h1>
+                        <h2 class="article-price"><%= product.price %> USD</h2>
+                        <h2 class="article-price"><%= product.category.name%></h2>
                     </div>
           
                     <!--Cantidad-->
-                    <div class="pd-article-quantity">
+                    <div class="article-quantity">
           
-                        <h1 class="pd-article-quantity-title">Cantidad</h1>
+                        <h1 class="article-quantity-title">Cantidad</h1>
           
-                        <select name="product-quantity" id="pd-quantity-button">
+                        <select name="product-quantity" id="quantity-button">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -42,15 +41,15 @@
                 </div>
           
                 <!--Boton Agregar al Carrito-->
-                <button class="pd-article-buy-button">Agregar al Carrito</button>
+                <button class="article-buy-button">Agregar al Carrito</button>
           
                 <!--Descripción-->
-                <div class="pd-article-description">
+                <div class="article-description">
           
                     <!--Titulo Descripción-->
-                    <h1 class="pd-article-description-title">Descripcion</h1>
+                    <h1 class="article-description-title">Descripcion</h1>
                     <!--Producto Descripción-->
-                    <h2 class="pd-article-description-text"> <%= product.description %> </h2>
+                    <h2 class="article-description-text"> <%= product.description %> </h2>
             </div>
         </article>
     </main>

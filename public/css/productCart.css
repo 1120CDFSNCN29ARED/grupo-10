@@ -1,5 +1,5 @@
 /*Pagina Carrito*/
-.pc-main{
+.main{
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column; 
@@ -8,7 +8,7 @@
 }
 
 /*Caja Producto*/
-.pc-product-article{
+.product-article{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +19,7 @@
 }
 
 /*Producto Total Info*/
-.pc-product-main-data{
+.product-main-data{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -29,13 +29,13 @@
 }
 
 /*Producto IMG*/
-.pc-product-img{
+.product-img{
     height: 70px;
     margin-right: 10px;
 }
 
 /*Producto Datos*/
-.pc-product-main-info{
+.product-main-info{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,7 +45,7 @@
 }
 
 /*Titulo del Producto*/
-.pc-product-main-info-title{
+.product-main-info-title{
     font-size: 14px;
     font-weight: 300;
     width: 100%;
@@ -53,7 +53,7 @@
 }
 
 /*Precio y Cantidad*/
-.pc-product-main-price-content{
+.product-main-price-content{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -62,7 +62,7 @@
 }
 
 /*Boton Cantidad*/
-#pc-cart-quantity-select{
+#cart-quantity-select{
     font-size: 10px;
     padding: 5px 10px 5px 0;
     border: solid rgb(77, 77, 77) 1px;
@@ -71,13 +71,13 @@
 }
 
 /*Precio Producto*/
-.pc-product-main-price-title{
+.product-main-price-title{
     font-size: 20px;
     font-weight: 400;
 }
 
 /*Boton Eliminar*/
-.pc-main-delete-button{
+.main-delete-button{
     border: none;
     background-color: transparent;
     color: rgb(63, 120, 224);
@@ -86,7 +86,7 @@
 }
 
 /*Sección Total a Pagar*/
-.pc-main-buy-section-info{
+.main-buy-section-info{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -95,13 +95,13 @@
 }
 
 /*Titulo Precio Final*/
-.pc-main-buy-section-title{
+.main-buy-section-title{
     font-size: 20px;
     font-weight: 300;
 }
 
 /*Boton Comprar*/
-.pc-main-buy-section-button{
+.main-buy-section-button{
     font-size: 15px;
     padding: 5px 10px 5px;
     width: 40%;
@@ -115,47 +115,47 @@
 @media (min-width: 768px){
    
     /*Caja Producto*/
-    .pc-product-article{
+    .product-article{
         max-width: 1200px;
     }
    
     /*Producto Datos*/
-    .pc-product-main-info{
+    .product-main-info{
          flex-direction: row;
     }
 
     /*Precio y Cantidad*/
-    .pc-product-main-price-content{
+    .product-main-price-content{
         width: 40%;
         justify-content: space-around;
     }
 
     /*Titulo del Producto*/
-    .pc-product-main-info-title{
+    .product-main-info-title{
         font-size: 20px;
     }
 
     /*Precio Producto*/
-    .pc-product-main-price-title{
+    .product-main-price-title{
          font-size: 25px;
     }
 
     /*Boton Cantidad*/
-    #pc-cart-quantity-select{
+    #cart-quantity-select{
         font-size: 15px;
     }
 
     /*Titulo Precio Final*/
-    .pc-main-buy-section-title{
+    .main-buy-section-title{
         font-size: 25px;
     }
 
     /*Boton Comprar*/
-    .pc-main-buy-section-button{
+    .main-buy-section-button{
         font-size: 20px;
     }
 }
-.pc-main-buy-section-button:hover{
+.main-buy-section-button:hover{
     background-color: rgb(184, 75, 108);
     transition: all 0.2s;
 }

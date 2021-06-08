@@ -1,24 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<%- include('../partials/head') %>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/productCreate.css">
+</head>
 
 <body class="pcreate-body">
     <%- include('../partials/header') %>
 
     <main class="pcreate-main">
-        <section id="pcreate-section-form">        
+        <section id="section-form">        
     
-            <form id="pcreate-form" action="/product/create" method="POST" enctype="multipart/form=data">
+            <form id="form" action="/product/create" method="POST" enctype="multipart/form=data">
                 
-                <h1 id="pcreate-form-title">Creación de producto</h1>
+                <h1 id="form-title">Creación de producto</h1>
 
-                <div class="pcreate-input-box">
+                <div class="input-box">
                     <label class="la-bel" for="productname">Nombre del producto:</label>
                     <input class="in-put" type="text" name="productname" placeholder="Nombre del producto" id="product-name" required>
                 </div>
            
-                <div class="pcreate-input-box">
+                <div class="input-box">
                     <label class="la-bel" for="category">Categoría:</label>
                     <select class="in-put" id="category" name="category" placeholder="categorias">
                         
@@ -34,21 +33,21 @@
                       </select>
                 </div>
     
-                <div class="pcreate-input-box">
+                <div class="input-box">
                     <label class="la-bel" for="prize">Precio:</label>
                     <input class="in-put" type="number" name="prize" placeholder="Precio" id="prize" required>
                 </div>
 
-                <div class="pcreate-input-box">
+                <div class="input-box">
                     <label class="la-bel" for="productImage">Imagen del producto:</label>
                     <input type="file" class="in-put" name="productImage" id="productImage"> 
                 </div>
 
-                <div class="pcreate-input-box">
+                <div class="input-box">
                     <textarea class="in-put" name="description" id="description" cols="30" placeholder="Descripción del producto" rows="5"></textarea>
                 </div>
 
-                <div class="pcreate-input-box">
+                <div class="input-box">
                     <button id="send-button" type="submit">CARGAR PRODUCTO</button>
                 </div>
 
