@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <%- include('../partials/head') %>
+</head>
 
 <body>
     <%- include('../partials/header') %>
@@ -50,11 +48,11 @@
                 <% for (let i=0; i < num; i++) { %>
                     <article class="home-article">
 
-                        <img src="/img/Products-Images/<%= productos[i].product_image %>" alt="Product-Image1" class="product-images">
+                        <img src="/img/Products-Images/Resmas/<%= product.product_img %>" alt="Product-Image1" class="product-images">
                     
-                        <h3 class="home-article-title"><%= productos[i].productname%></h3>
+                        <h3 class="home-article-title"><%= product.productname%></h3>
                     
-                        <h4 class="home-article-price"><%= productos[i].prize%>USD</h4>
+                        <h4 class="home-article-price"><%= product.price%>USD</h4>
                     
                         <div class="home-article-button">
                     

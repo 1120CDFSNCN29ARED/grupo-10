@@ -30,7 +30,10 @@ const productsController = {
 
     //filtro
     'filter': (req, res) => {
-        res.render('../views/products/productFilter', {productos: productos})
+        db.Product.findAll()
+            .then((product) => {
+                res.render('../views/products/productFilter', { product: product });
+            });
     },
 
     //Creacion

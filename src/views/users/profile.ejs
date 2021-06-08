@@ -1,25 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<%- include('../partials/head') %>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
 
 <body id="pd-body">
     <%- include('../partials/header') %>
 
-  
-    <main class="profile-main">
-        <article class="profile-main-article">
-            <div class="profile-divs">
-                <div id="profile-avatar-box">
+    <main class="main">
+
+        <article class="main-article">
+
+            <div class="divs">
+
+                <div id="avatar-box">
                     <img src="/img/avatars/<%= users.profile_img %>" alt="avatar" class="avatar">
                 </div>  
             </div>
-            <div class="profile-divs">
+
+            <div class="divs">
                 <h1><%= users.nickname %></h1>
                 <h2><%= users.first_name + ' ' + users.last_name %></h2>
                 <p><%= users.email %></p>
             </div>
-            <div class="profile-divs" id="profile-divs-forms">
+
+            <div class="divs" id="divs-forms">
 
                 <% if (locals.isLogged) { %>
                     <form action="/users/delete/:id" method="POST" class="home-article-form">

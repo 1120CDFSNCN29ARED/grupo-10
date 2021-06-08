@@ -1,27 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<%- include('../partials/head') %>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/usersList.css">
+</head>
 
 <body id="pd-body">
     <%- include('../partials/header') %>
 
-  
-    <main class="usersl-main">
+    <main class="main">
+
         <% for(let i = 0 ; i < users.length; i++){ %>
-            <a class="usersl-main-article">
-                <div class="usersl-divs">
-                    <div id="usersl-avatar-box">
+
+            <a class="main-article">
+
+                <div class="divs">
+
+                    <div id="avatar-box">
                         <img src="/img/avatars/<%= users[i].profile_img %>" alt="avatar" class="avatar">
                     </div>  
                 </div>
-                <div class="usersl-divs">
+
+                <div class="divs">
                     <h1><%= users[i].nickname %></h1>
                     <h2><%= users[i].first_name + ' ' + users[i].last_name %></h2>
                     <p><%= users[i].email %></p>
                     <h3>id: <%= users[i].id %></h3>
                 </div>
-                <div class="usersl-divs-buttons">
+
+                <div class="divs-buttons">
+                    
                     <form action="/users/delete/<%= users[i].id%>" method="POST" class="home-article-form">
                         <button type="submit" class="article-button-comprar">Eliminar</button>
                     </form>

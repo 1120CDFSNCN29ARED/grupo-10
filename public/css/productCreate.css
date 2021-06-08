@@ -1,6 +1,6 @@
 /*PRODUCT-FORM*/
 
-#pcreate-section-form {
+#section-form {
     display: flex;
     max-width: 768px;
     margin: 2vh auto;
@@ -10,13 +10,13 @@
     justify-content: center;
     font-family: 'Roboto', sans-serif;
 }
-#pcreate-form {
+#form {
     width: 100%;
     margin: 20px 10px;
     justify-items: center;
     
 }
-#pcreate-form-title {
+#form-title {
     font-size: 20px;
     font-weight: 300;
     margin-bottom: 10px;
@@ -26,7 +26,7 @@
 
 /*font-family: "Bebas Neue";*/
 
-.pcreate-input-box {  
+.input-box {  
     display: flex;
     width: 100%;
     margin: 2% auto;

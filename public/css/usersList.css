@@ -1,10 +1,10 @@
-.usersl-main {
+.main {
     padding: 20px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.usersl-main-article {
+.main-article {
     margin: 20px;
     width: 200px;
     padding: 10px;
@@ -17,22 +17,22 @@
     color: rgb(32, 32, 32);
 }
 
-.usersl-divs{
+.divs{
     text-align: center;
 }
-.usersl-divs-buttons{
+.divs-buttons{
     display: flex;
     flex-wrap:wrap;
     justify-content:space-around;
 }
-.usersl-divs h1 {
+.divs h1 {
     overflow: hidden;
     font-family: 'American Typewriter';
     font-weight: 400;
     font-size: 20px;
     color: black;
 }
-#usersl-avatar-box{
+#avatar-box{
     border: solid white;
     border-width: 5px;
     display: inline-block;
@@ -51,10 +51,10 @@
 @media (min-width: 768px){
 }
 @media (min-width: 1200px){
-    .usersl-main{
+    .main{
         padding: 20px 3%;
     }
 }
-.usersl-main-article:hover{
+.main-article:hover{
     box-shadow: 0px 0px 30px rgb(139, 139, 139);
 }

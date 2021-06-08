@@ -1,7 +1,7 @@
-.profile-main {
+.main {
     padding: 20px;
 }
-.profile-main-article {
+.main-article {
     margin: auto;
     max-width: 90%;
     padding: 10px;
@@ -12,16 +12,16 @@
     overflow: hidden;
     margin-bottom: 40px;
 }
-.profile-divs{
+.divs{
     text-align: center;
     
 }
-.profile-divs h1 {
+.divs h1 {
     font-family: 'American Typewriter';
     font-weight: 400;
     font-size: 40px;
 }
-#profile-avatar-box{
+#avatar-box{
     border-width: 5px;
     display: inline-block;
     position: relative;
@@ -30,7 +30,7 @@
     overflow: hidden;
     border-radius: 50%;
 }
-#profile-divs-forms{
+#divs-forms{
     display: flex;
     justify-content: space-around;
 }
@@ -41,13 +41,13 @@
     margin-left: -40px;   
 }
 @media (min-width: 768px){
-    .profile-main-article {
+    .main-article {
         max-width: 500px;
     }
-    .profile-divs{
+    .divs{
         margin: 30px auto;
     }
-    #profile-avatar-box {
+    #avatar-box {
         width: 250px;
         height: 250px;
     }
