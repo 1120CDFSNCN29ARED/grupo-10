@@ -14,8 +14,9 @@
 
                 <div class="input-box">
                     <label class="la-bel" for="productname">Nombre del producto:</label>
-                    <input class="in-put" type="text" name="productname" placeholder="Nombre del producto" id="product-name" required>
+                    <input class="in-put" type="text" name="productname" placeholder="Nombre del producto" id="product-name" >
                 </div>
+                <p class="text-error" id="name-text-error"></p>
            
                 <div class="input-box">
                     <label class="la-bel" for="category">Categoría:</label>
@@ -35,8 +36,9 @@
     
                 <div class="input-box">
                     <label class="la-bel" for="prize">Precio:</label>
-                    <input class="in-put" type="number" name="prize" placeholder="Precio" id="prize" required>
+                    <input class="in-put" type="number" name="prize" placeholder="Precio" id="prize">
                 </div>
+                <p class="text-error" id="price-text-error"></p>
 
                 <div class="input-box">
                     <label class="la-bel" for="productImage">Imagen del producto:</label>
@@ -44,8 +46,9 @@
                 </div>
 
                 <div class="input-box">
-                    <textarea class="in-put" name="description" id="description" cols="30" placeholder="Descripción del producto" rows="5"></textarea>
+                    <textarea class="in-put" name="description" id="description" cols="30" placeholder="Descripción del producto" rows="5"></textarea>     
                 </div>
+                <p class="text-error" id="description-text-error"></p>
 
                 <div class="input-box">
                     <button id="send-button" type="submit">CARGAR PRODUCTO</button>
@@ -57,5 +60,6 @@
     </main>
 
     <%- include('../partials/footer') %>
+    <script src="/js/productCreate.js"> </script>
 </body>
 </html>
