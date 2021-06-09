@@ -32,7 +32,7 @@ router.post('/sign-in', uploadFile.single('avatar'), validations, usersControlle
 
 //Edicion
 router.get('/edit/:id', usersController.edit);
-router.put('/edit/:id', usersController.updateUser);
+router.put('/edit/:id', validations, usersController.updateUser);
 
 //Eliminacion
 router.post('/delete/:id', usersController.delete);

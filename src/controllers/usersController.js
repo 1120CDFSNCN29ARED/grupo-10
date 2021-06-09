@@ -48,7 +48,7 @@ const usersController = {
                 last_name: req.body.apellido,
                 email: req.body.email,
                 nickname: req.body.userName,
-                profile_img: req.file ? req.file.filename : 'userAvatar.png', //ERROR TypeError: Cannot read property 'filename' of undefined.
+                profile_img: req.body.avatar ? req.body.avatar : 'userAvatar.png', //ERROR TypeError: Cannot read property 'filename' of undefined.
                 password: bcryptjs.hashSync(req.body.password, 10),
                 user_type_id: null,
                 location_id: null
@@ -63,6 +63,16 @@ const usersController = {
     //Edicion
     'edit': (req, res) => {
         /*let usuarioAEditar = req.session.userLogged;*/
+
+        const resultValidation = validationResult(req);
+
+        if (resultValidation.errors.length > 0) {
+            return res.render('../views/users/userEdit', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
+        }
+
         db.User.findByPk(req.params.id)
             .then((users) => {
                 res.render('../views/users/userEdit', { users: users });
@@ -74,8 +84,8 @@ const usersController = {
             last_name: req.body.apellido,
             email: req.body.email,
             nickname: req.body.userName,
-            profile_img: req.body.avatar,
-            password: req.body.password,
+            profile_img: req.body.avatar ? req.body.avatar : 'userAvatar.png',
+            password: bcryptjs.hashSync(req.body.password, 10),
             user_type_id: null,
             location_id: null
         }, {

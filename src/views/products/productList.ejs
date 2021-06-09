@@ -6,6 +6,45 @@
 
     <!--Pagina Listado-->
     <main class="pf-main-page">
+        <!--Seccion Filtros-->
+        <nav class="pf-nav-filter">
+            <form action="/product/create" method="get" >
+                <button class="plus-button" type="submit"><i class="fas fa-plus"></i></button>
+            </form>
+   
+            <!--Filtro Categorias-->
+            <select name="categorias" id="pf-select-category" class="pf-selec-button">
+                <option value="all">Todos</option>
+                <option value="paper">Resmas</option>
+                <option value="librery">Libreria</option>
+                <option value="office-products">Equipamiento para la Oficina</option>
+                <option value="merch">Merchandising</option>
+            </select>
+   
+            <!--Filtro Relevancia-->
+            <select name="price-order" id="pf-select-price-order" class="pf-selec-button">
+                <option value="relevante">Más Relevantes</option>
+                <option value="lower-price">Menor Precio</option>
+                <option value="highest-price">Mayor Precio</option>
+            </select>
+   
+            <!--Filtro Descuento-->
+            <select name="discount" id="pf-select-discount-filter" class="pf-selec-button">
+                <option value="all">Todos</option>
+                <option value="discount">Con Descuento</option>
+                <option value="no-discount">Sin Descuento</option>
+            </select>
+   
+            <!--Filtro Precio-->
+            <select name="price-filter" id="pf-select-price-filter" class="pf-selec-button">
+                <option value="50-o-menos">Hasta 50 USD</option>
+                <option value="50-150">50 USD a 150 USD</option>
+                <option value="150-250">150 USD a 250 USD</option>
+                <option value="250-o-mas">Más de 250 USD</option>
+            </select>
+
+            
+        </nav>
            
         <!--Seccion Productos-->
         <section class="pf-main-section">
