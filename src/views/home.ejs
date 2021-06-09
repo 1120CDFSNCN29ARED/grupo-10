@@ -39,17 +39,19 @@
         <!--Sección Categorias-->
         <section class="home-main-category">
 
-             <a href="/product" class="home-category1 home-category">
-                 <h3 class="home-category-title">Paper</h1>
-             </a>
-
-            <a href="/product" class="home-category2 home-category">
-                 <h3 class="home-category-title">Libreria</h1>
-            </a>
-
-            <a href="/product" class="home-category3 home-category">
-                 <h3 class="home-category-title">Equipos Multifuncionales</h1>
-            </a>
+             <div class="home-main-category-div">
+                <a href="/product" class="home-category1 home-category">
+                    <h3 class="home-category-title">Paper</h1>
+                </a>
+                
+                <a href="/product" class="home-category2 home-category">
+                    <h3 class="home-category-title">Libreria</h1>
+                </a>
+                
+                <a href="/product" class="home-category3 home-category">
+                    <h3 class="home-category-title">Equipos Multifuncionales</h1>
+                </a>
+             </div>
 
         </section>
         
@@ -59,17 +61,53 @@
         <!--Productos-->
         <section class="article-section">       
             
-            <!--Numero de Productos-->
-            <% const num = 5 %>
-
-            <% for (let i = 0; i < num; i++) { %> 
-                <%- include('./partials/homeArticle') %>
-            <% } %>   
+            <div class="article-section-div">
+                <!--Numero de Productos-->
+                <% const num=5 %>
+                
+                    <% for (let i=0; i < num; i++) { %>
+                        <article class="home-article">
+                
+                            <img src="/img/Products-Images/Resmas/<%= product[i].product_img %>" alt="Product-Image1"
+                                class="product-images">
+                
+                            <h3 class="home-article-title">
+                                <%= product[i].name%>
+                            </h3>
+                
+                            <h4 class="home-article-price">
+                                <%= product[i].price%>USD
+                            </h4>
+                
+                            <div class="home-article-button">
+                
+                                <form action="#" method="POST" class="home-article-form">
+                                    <button type="submit" class="article-button-comprar">Comprar</button>
+                                </form>
+                
+                                <form action="/product/detail/<%= product[i].id %>" method="GET" class="home-article-form">
+                                    <button class="article-button-ver">Ver</button>
+                                </form>
+                
+                            </div>
+                        </article>
+                    <% } %>
+            </div> 
         </section>
 
         <!--Banner-->
         <section class="home-banner">
-            <img src="/img/DM-Banner.jpg" alt="Publish Banner">
+            <div class="banner-div">
+                <p>Envios Gratis con compras mayores a 100 USD</p>
+            </div>
+
+            <div class="banner-div banner-div-center">
+                <p>Hasta 12 Cuotas sin Interes</p>
+            </div>
+
+            <div class="banner-div">
+                <p>Los precios mas Bajos</p>
+            </div>
         </section>
 
         <!--Titulo de la Sección 2-->
@@ -78,28 +116,36 @@
         <!--Productos-->
         <section class="article-section">
                   
-            <% for (let i=0; i < num; i++) { %>
-                  <article class="home-article">
-
-                         <img src="/img/Products-Images/Product-Image1.jpg" alt="Product-Image1" class="product-images">
- 
-                         <h3 class="home-article-title">Resma 200 hojas color Blanco</h3>
-
-                         <h4 class="home-article-price">50 USD</h4>
-
-                         <div class="home-article-button">
-
-                             <form action="#" method="POST" class="home-article-form">
-                                 <button type="submit" class="article-button-comprar">Comprar</button>
-                             </form>
-
-                             <form action="#" method="GET" class="home-article-form">
-                                 <button class="article-button-ver">Ver</button>
-                             </form>
-
-                        </div>
-                  </article>
-            <% } %>
+            <div class="article-section-div">
+                <% const num2=11 %>
+                    <% for (let i=6; i < num2; i++) { %>
+                        <article class="home-article">
+                
+                            <img src="/img/Products-Images/Resmas/<%= product[i].product_img %>" alt="Product-Image1"
+                                class="product-images">
+                
+                            <h3 class="home-article-title">
+                                <%= product[i].name%>
+                            </h3>
+                
+                            <h4 class="home-article-price">
+                                <%= product[i].price%>USD
+                            </h4>
+                
+                            <div class="home-article-button">
+                
+                                <form action="#" method="POST" class="home-article-form">
+                                    <button type="submit" class="article-button-comprar">Comprar</button>
+                                </form>
+                
+                                <form action="/product/detail/<%= product[i].id %>" method="GET" class="home-article-form">
+                                    <button class="article-button-ver">Ver</button>
+                                </form>
+                
+                            </div>
+                        </article>
+                        <% } %>
+            </div>
         </section>
     </main>
 

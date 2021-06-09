@@ -1,8 +1,16 @@
+let db = require('../database/models');
+
 const indexController = {
     
     //Home
     'index': (req, res) => {
-        res.render('home',  { user: req.session.userLogged });
+
+        db.Product.findAll()
+            .then((product) => {
+                res.render('home', { user: req.session.userLogged, product: product });
+            });
+
+        
     }
 }
 
