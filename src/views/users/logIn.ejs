@@ -16,10 +16,16 @@
      
                 <!--Campos a Llenar-->
                 <div class="li-main-input-data">
+                    
                     <input class="li-main-in-put emailForm" type="email" name="email" placeholder="Correo electrónico" value="<%= locals.oldData ? oldData.email : null %>" autofocus >
-                        <p class="text-error emailError"></p>
+                    <p class="text-error emailError"></p>
+                    <% if (locals.errors && errors.email) { %>
+                        <p class="text-error"><i class="fas fa-exclamation-circle"></i> <%= errors.email.msg %></p>
+                    <% } %>
+
                     <input class="li-main-in-put passwordForm" type="password" name="password" placeholder=" Contraseña">
-                        <p class="text-error passwordError"></p>
+                    <p class="text-error passwordError"></p>
+
                 </div>
      
                 <!--Recordatorios-->

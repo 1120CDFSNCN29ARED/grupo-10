@@ -24,7 +24,10 @@
                     <p class="text-error" id="lastName-text-error"></p>
 
                     <input class="li-main-in-put" type="email" name="email" id="emailInput" placeholder="E-mail" value="<%= locals.oldData ? oldData.email : null %>" >
-                    <P class="text-error" id="email-text-error"></p>
+                    <p class="text-error" id="email-text-error"></p>
+                    <% if (locals.errors && errors.email) { %>
+                        <p class="text-error"><i class="fas fa-exclamation-circle"></i> <%= errors.email.msg %></p>
+                    <% } %>
 
                     <input class="li-main-in-put" type="text" name="userName" id="userNameInput" placeholder="Nombre de usuario" value="<%= locals.oldData ? oldData.userName : null %>" >
                     <p class="text-error" id="userName-text-error"></p> 

@@ -61,7 +61,7 @@ window.addEventListener('load', ()=>{
         //-----------------validaciones-del-username------------------//
         if(userNameInput.value == ''){
             errors.push('Tenés que completar este campo');
-            userNameInput.innerHTML='<i class="fas fa-exclamation-circle"></i> Tenés que completar este campo';
+            userNameError.innerHTML='<i class="fas fa-exclamation-circle"></i> Tenés que completar este campo';
             
         }else if(userNameInput.value.length < 6){
             errors.push('Tiene que tener al menos 6 caracteres');
