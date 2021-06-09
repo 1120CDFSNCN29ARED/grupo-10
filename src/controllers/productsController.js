@@ -81,7 +81,7 @@ const productsController = {
             }
         });
 
-        res.redirect('/product/' + req.params.id);
+        res.redirect('/product/detail/' + req.params.id);
     },
 
     //Borrado    

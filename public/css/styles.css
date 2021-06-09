@@ -7,9 +7,12 @@
 body{
      font-family: 'Lato', sans-serif, 'Bebas Neue';   
      background: linear-gradient(45deg, #728cff, #a0a0a0);
-     background-image: url(/img/FondosMain/DM-Fondo2.jpg);
+     background-image: url(/img/FondosMain/DM-Fondo5.jpg);
      background-size: cover;
      background-attachment: fixed;
+     display: flex;
+     flex-direction:column;
+     min-height: 100vh;
 }
 
 body::-webkit-scrollbar {
