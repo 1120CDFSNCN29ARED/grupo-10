@@ -44,15 +44,15 @@
     
         <!--Seccion Productos-->
         <section class="pf-main-section">
-            <% const num= productos.length %>
+            <% const num= product.length %>
                 <% for (let i=0; i < num; i++) { %>
                     <article class="home-article">
 
-                        <img src="/img/Products-Images/Resmas/<%= product.product_img %>" alt="Product-Image1" class="product-images">
+                        <img src="/img/Products-Images/Resmas/<%= product[i].product_img %>" alt="Product-Image1" class="product-images">
                     
-                        <h3 class="home-article-title"><%= product.productname%></h3>
+                        <h3 class="home-article-title"><%= product[i].productname%></h3>
                     
-                        <h4 class="home-article-price"><%= product.price%>USD</h4>
+                        <h4 class="home-article-price"><%= product[i].price%>USD</h4>
                     
                         <div class="home-article-button">
                     
@@ -60,7 +60,7 @@
                                 <button type="submit" class="article-button-comprar">Comprar</button>
                             </form>
                     
-                            <form action="/product/detail/<%= product.id %>" method="GET" class="home-article-form">
+                            <form action="/product/detail/<%= product[i].id %>" method="GET" class="home-article-form">
                                 <button class="article-button-ver">Ver</button>
                             </form>
                     
