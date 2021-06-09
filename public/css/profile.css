@@ -11,13 +11,13 @@
     border: solid white;
     overflow: hidden;
     margin-bottom: 40px;
+    margin-top: 40px;
 }
 .divs{
     text-align: center;
     
 }
 .divs h1 {
-    font-family: 'American Typewriter';
     font-weight: 400;
     font-size: 40px;
 }
@@ -40,6 +40,26 @@
     height: 100%;
     margin-left: -40px;   
 }
+
+.button-edit-delete{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.user-delete-button {
+    width: 49%;
+}
+.user-edit-button {
+    width: 49%;
+}
+
+.user-list-button{
+    width: 100%;
+}
+
 @media (min-width: 768px){
     .main-article {
         max-width: 500px;

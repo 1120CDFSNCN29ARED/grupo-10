@@ -9,7 +9,7 @@
 
         <% for(let i = 0 ; i < users.length; i++){ %>
 
-            <a class="main-article">
+            <a href="/users/detail/<%= users[i].id %>" class="main-article">
 
                 <div class="divs">
 
@@ -19,10 +19,7 @@
                 </div>
 
                 <div class="divs">
-                    <h1><%= users[i].nickname %></h1>
-                    <h2><%= users[i].first_name + ' ' + users[i].last_name %></h2>
-                    <p><%= users[i].email %></p>
-                    <h3>id: <%= users[i].id %></h3>
+                    <h2><%= users[i].nickname %></h2>
                 </div>
 
                 <div class="divs-buttons">

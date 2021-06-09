@@ -20,6 +20,7 @@
                 <h1><%= users.nickname %></h1>
                 <h2><%= users.first_name + ' ' + users.last_name %></h2>
                 <p><%= users.email %></p>
+                <p>id: <%= users.id %> </p>
             </div>
 
             <div class="divs" id="divs-forms">
@@ -34,6 +35,23 @@
                     </form>
                 <% } %>
                 
+            </div>
+
+            <div class="divs-buttons">
+            
+                <div class="button-edit-delete">
+                    <form action="/users/delete/<%= users.id%>" method="POST" class="home-article-form user-delete-button">
+                        <button type="submit" class="article-button-comprar">Eliminar</button>
+                    </form>
+                    
+                    <form action="/users/edit/<%= users.id%>" method="GET" class="home-article-form user-edit-button">
+                        <button type="submit" class="article-button-ver">Editar</button>
+                    </form>
+
+                </div>
+                <form action="/users/list" method="GET" class="home-article-form user-list-button">
+                    <button type="submit" class="article-button-ver">Lista de Usuarios</button>
+                </form>
             </div>
         </article>
     </main>

@@ -47,6 +47,8 @@ router.get('/profile/', authMiddleware, usersController.profile);
 //Salir de la Sesion
 router.get('/logout/', usersController.logout);
 
+//detalle
+router.get('/detail/:id',  usersController.detail);
 
 
 

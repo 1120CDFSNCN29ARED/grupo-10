@@ -12,17 +12,18 @@
     box-shadow: 0px 0px 10px rgb(139, 139, 139);
     border: solid white;
     border-width: 3px;
-    padding-bottom: 30px;
     text-decoration: none;
     color: rgb(32, 32, 32);
 }
 
 .divs{
     text-align: center;
+    margin-top:10px;
 }
 .divs-buttons{
     display: flex;
     flex-wrap:wrap;
+    margin-top:10px;
     justify-content:space-around;
 }
 .divs h1 {

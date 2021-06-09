@@ -53,7 +53,7 @@ const usersController = {
                 user_type_id: null,
                 location_id: null
             })
-            res.redirect('/users/log-in');     
+            res.redirect('/users/list');     
             
 
         })
@@ -172,7 +172,16 @@ const usersController = {
         res.clearCookie('userEmail');
         req.session.destroy();
         res.redirect('/');
+    },
+
+    // Detail
+    'detail': (req, res) => {
+        db.User.findByPk(req.params.id)
+            .then( (users) => {
+                res.render('../views/users/profile', {users: users})
+            })
     }
 }
+
 
 module.exports = usersController;
