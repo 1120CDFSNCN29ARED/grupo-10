@@ -52,5 +52,4 @@ router.get('/detail/:id',  usersController.detail);
 
 
 
-
 module.exports = router;
