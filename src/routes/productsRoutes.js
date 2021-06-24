@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const productsController = require('../controllers/productsController');
+const apiController = require('../controllers/api/apiProductsController');
 
 //Listado de Productos
 router.get('/', productsController.list);
@@ -24,6 +25,12 @@ router.put('/edit/:id', productsController.updateEdit);
 
 //Borrado de un Producto
 router.post('/delete/:id', productsController.delete);
+
+//api
+router.get('/api', apiController.list);
+router.get('/api/:id', apiController.detail);
+router.get('/api/img/:id', apiController.img);
+
 
 
 module.exports = router;
