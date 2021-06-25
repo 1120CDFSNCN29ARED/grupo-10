@@ -1,8 +1,8 @@
-const express = require ('express');
+const express = require('express');
 const router = express.Router();
 const usersController = require('../controllers/usersController');
 const path = require('path');
-
+const apiController = require('../controllers/api/apiUsersController');
 
 const validations = require('../middlewares/validateSignInMiddleware')
 const guestMiddleware = require('../middlewares/guestMiddleware');
@@ -11,7 +11,7 @@ const authMiddleware = require('../middlewares/authMiddleware');
 //MULTER
 const multer = require('multer');
 const storage = multer.diskStorage({
-    destination: (req, file, cb) => {      
+    destination: (req, file, cb) => {
         let folder = path.resolve(__dirname, '../../public/img/avatars');
         cb(null, folder);
     },
@@ -48,7 +48,12 @@ router.get('/profile/', authMiddleware, usersController.profile);
 router.get('/logout/', usersController.logout);
 
 //detalle
-router.get('/detail/:id',  usersController.detail);
+router.get('/detail/:id', usersController.detail);
+
+//api
+router.get('/api', apiController.list);
+router.get('/api/:id', apiController.detail);
+router.get('/api/img/:id', apiController.img);
 
 
 
